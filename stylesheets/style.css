@@ -28,8 +28,11 @@ a:active {
 	color: #999900;
 }
 
-body {
+#backgroundDiv {
 	background-image: url("../images/bg.png");
+	background-attachment: fixed;
+	padding-bottom: 40px;
+	margin-bottom: -25px;
 }
 
 #MainContainer {
