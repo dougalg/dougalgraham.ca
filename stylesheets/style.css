@@ -2,6 +2,11 @@
      Some parts overridden in the layout.css file
      */
 
+body {
+	position: relative;
+	z-index: 1;
+}
+
 /* Fonts */
 @font-face {
 	font-family: 'OwahTagu';
@@ -33,6 +38,7 @@ a:active {
 	background-attachment: fixed;
 	padding-bottom: 40px;
 	margin-bottom: -25px;
+	z-index: 1;
 }
 
 #MainContainer {
@@ -43,6 +49,7 @@ a:active {
 	-webkit-box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 10);
 	-moz-box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 10);
 	box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 10);
+	z-index: 1;
 }
 
 #MainNavigation {

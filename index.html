@@ -33,6 +33,9 @@
 	<link rel="stylesheet" href="stylesheets/style.css">
 	<link rel="stylesheet" href="stylesheets/layout.css">
 
+	<!--[if lt IE 8]>
+		<link rel="stylesheet" type="text/css" href="stylesheets/ie7.css" media="screen, projection" />
+	<![endif]-->
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -47,17 +50,16 @@
 </head>
 <body>
 	<div data-stellar-background-ratio="0.5" id="backgroundDiv">
-		<div class="container clearfix" id="top">
-			<nav class="sixteen columns clearfix" id="MainNavigation">
-				<ul>
-					<li><a href="#aboutMe" class="scroll">About Me</a></li>
-					<li><a href="#portfolio" class="scroll">Portfolio</a></li>
-					<li><a href="#contact" class="scroll">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
-
 		<div class="container clearfix" id="MainContainer">
+			<div class="container clearfix" id="top">
+				<nav class="sixteen columns clearfix" id="MainNavigation">
+					<ul>
+						<li><a href="#aboutMe" class="scroll">About Me</a></li>
+						<li><a href="#portfolio" class="scroll">Portfolio</a></li>
+						<li><a href="#contact" class="scroll">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
 			<div class="sixteen columns clearfix" id="logo">
 				<img src="images/logo.png" alt="This is a logo">
 				<p class="name">&nbsp;&nbsp;Dougal</p><p class="name">Graham&nbsp;&nbsp;</p>
