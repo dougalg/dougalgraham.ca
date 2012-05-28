@@ -27,10 +27,14 @@
 	@media only screen and (max-width: 959px) {}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
-	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		#MainNavigation, .subtitle, legend, h2 {
+			font-size: 18pt;
+		}
+	}
 
 	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
+	@media only screen and (max-width: 767px) {	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -41,7 +45,7 @@
 			font-size: 37pt;
 		}
 		#MainNavigation, .subtitle, legend, h2 {
-			font-size: 16pt;
+			font-size: 11pt;
 		}
 		#MainNavigation ul li {
 			margin: 0px 15px 0px 15px;
@@ -69,7 +73,7 @@
 			font-size: 32pt;
 		}
 		#MainNavigation, .subtitle, legend, h2 {
-			font-size: 12pt;
+			font-size: 9pt;
 		}
 		#MainNavigation ul li {
 			margin: 0px 5px 0px 5px;
