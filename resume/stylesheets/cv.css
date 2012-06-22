@@ -193,7 +193,8 @@ article .date:after {
 		padding-bottom: 0px; }
 
 	/* Fix top list for print */
-	dl { padding-right: 1cm; }
+	dl { padding-right: 1cm;
+		font-size: 0.9em; }
 	dt {text-align: left;}
 	dd {text-align: right;
 		margin: 0% 1% 0% 0%;}

@@ -58,8 +58,8 @@
  */
 class WkHtmlToPdf
 {
-    //protected $bin='/usr/local/bin/wkhtmltopdf';
-    protected $bin='/bin/wkhtmltopdf';
+    protected $bin='/usr/local/bin/wkhtmltopdf';
+    //protected $bin='/bin/wkhtmltopdf';
 
     protected $options=array();
     protected $pageOptions=array();
