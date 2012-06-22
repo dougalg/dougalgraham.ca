@@ -2,8 +2,12 @@
 
 // What do you want to call your PDF?
 $PDFName = 'Dougal_Graham_-_CV.pdf';
+// What is your HTML CV called?
+$DVName = 'index.html';
+
 // If the PDF file is older than the HTML file then create it again, otherwise, just redirect
-if (filemtime($PDFName) > filemtime('index.html')) {
+// Also create if the file does not exist
+if (file_exists($PDFName) == false || filemtime($PDFName) > filemtime($PDFName)) {
 	include('wkhtmltopdf.php');
 	$pdf = new WkHtmlToPdf(array(
 	//    'no-outline',         // Make Chrome not complain
@@ -15,8 +19,7 @@ if (filemtime($PDFName) > filemtime('index.html')) {
 	));
 
 	$pdf->setPageOptions(array(
-	 //   'disable-smart-shrinking',
-	//    'user-style-sheet' => 'pdf.css',
+	// 	'disable-smart-shrinking',
 		'print-media-type',
 		'header-html' => 'blank.html',
 		'footer-html' => 'blank.html',
