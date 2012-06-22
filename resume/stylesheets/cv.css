@@ -128,8 +128,9 @@ article .date:after {
 @media print {
 	/* We need nice size margins */
 	@page {
-		margin: 4cm 2cm 4cm 2cm;
+		/*margin: 3cm 2cm 4cm 2cm;*/
 	}
+	body {margin: 3cm 2cm 4cm 2cm;}
 	/* Don't allow page breaks inside articles, or any of the academic subsections */
 	article, #academic section { page-break-inside: avoid; }
 
