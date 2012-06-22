@@ -1,7 +1,0 @@
-QMAKE_PRL_BUILD_DIR = /Library/WebServer/Documents/dougalgraham.ca/resume/PDFLibs/wkhtmltopdf-qt/src/3rdparty/webkit/WebCore/
-QMAKE_PRO_INPUT = WebCore.pro
-QMAKE_PRL_SOURCE_DIR = /www/dougalgraham.ca/resume/PDFLibs/wkhtmltopdf-qt/src/3rdparty/webkit/WebCore
-QMAKE_PRL_TARGET = libQtWebKit.a
-QMAKE_PRL_CONFIG = lex yacc uic resources sdk rez release ReleaseBuild Release build_pass qt release app_bundle incremental global_init_link_order lib_version_first plugin_no_soname link_prl def_files_disabled exceptions no_mocdepend release qt_no_framework x86_64 release static largefile sse3 sse4_1 sse4_2 x86_64 absolute_library_soname dylib create_prl link_prl depend_includepath QTDIR_build release ReleaseBuild Release build_pass building-libs depend_includepath standalone_package depend_includepath qt_install_headers qt warn_on depend_includepath qmake_cache target_qt debug_and_release hide_symbols create_libtool create_pc no_debug_info release ReleaseBuild Release build_pass objective_c x86_64 no_autoqmake moc thread staticlib static
-QMAKE_PRL_VERSION = 4.7.4
-QMAKE_PRL_LIBS = -L/www/dougalgraham.ca/resume/PDFLibs/wkqt/lib -L../JavaScriptCore/release  -ljscore -L/www/dougalgraham.ca/resume/PDFLibs/wkqt/lib -framework ApplicationServices -framework CoreFoundation -lQtXmlPatterns -framework SystemConfiguration -lQtGui -framework Carbon -framework AppKit -lQtNetwork -lQtCore -lz -lm -framework Carbon -framework AppKit 
