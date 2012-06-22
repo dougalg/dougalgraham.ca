@@ -3,10 +3,10 @@ include('wkhtmltopdf.php');
 $pdf = new WkHtmlToPdf(array(
 //    'no-outline',         // Make Chrome not complain
 // Why do we need to specify margins again?
-	'margin-top'    => '3cm',
+/*	'margin-top'    => '3cm',
 	'margin-right'  => '1.5cm',
 	'margin-bottom' => '2.5cm',
-	'margin-left'   => '2cm',
+	'margin-left'   => '2cm',*/
 ));
 
 $pdf->setPageOptions(array(
