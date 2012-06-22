@@ -40,8 +40,11 @@ a, a:visited, span.linkLike {
 	text-decoration: none;
 	border-bottom: 1px dotted #00e;
 }
-a:hover, span.linkLike:hover {
+a:hover, span.linkLike:hover, h3 a:visited:hover {
 	color: #00e;
+}
+h3 a, h3 a:visited {
+	color: #2E99B8;
 }
 
 /* 2. Contact Info */
