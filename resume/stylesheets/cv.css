@@ -138,7 +138,7 @@ article .date:after {
 	article, #academic section { page-break-inside: avoid; }
 
 	/* Reset everything to boring black */
-	body *, .work h3:nth-child(2), h2:nth-child(2), .skills h3, dl dt, #academic article span.title, .date:before, .date:after {
+	body *, .work h3:nth-child(2), h2:nth-child(2), .skills h3, dl dt, h3 a, #academic article span.title, .date:before, .date:after {
 		color: black;
 		text-decoration: none;
 		border: none;
@@ -157,6 +157,7 @@ article .date:after {
 		font-style: italic; }
 	h3, h4 {
 		line-height: 1.3em; }
+
 	/* Put links after the text so people know they're there */
 	a:link:after, a:visited:after { content:" [" attr(href) "] "; }
 	/* Exclude links which aren't text */
