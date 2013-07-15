@@ -23,7 +23,7 @@ h4 { font-size: 16px; line-height: 19px; margin-bottom: 10px; }
 h5 { font-size: 15px; line-height: 17px; }
 h6 { font-size: 14px; line-height: 16px; }
 
-.work h3:nth-child(2), h2:nth-child(2), .skills h3, dl dt, #academic article span.title {
+.work h3:nth-child(2), h2:nth-child(2), .skills h3, dl dt, #academic article span.title, #academic article span a, #academic article span a.visited {
 	color: #2E99B8;}
 
 header h2 {
@@ -40,7 +40,7 @@ a, a:visited, span.linkLike {
 	text-decoration: none;
 	border-bottom: 1px dotted #00e;
 }
-a:hover, span.linkLike:hover, h3 a:visited:hover {
+a:hover, span.linkLike:hover, h3 a:visited:hover, #academic article span a:hover {
 	color: #00e;
 }
 h3 a, h3 a:visited {
