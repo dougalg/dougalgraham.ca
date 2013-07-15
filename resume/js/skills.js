@@ -46,6 +46,7 @@ $(function(){
 		hook = 'skillsClass_'+$(this).text().replace(/\W/g, '_');
 		$(this).parents('#exp_and_ed article.work').addClass(hook);
 	});
+
 	// Sort and add the checkboxes, lis, etc...
 	allSkills.sort();
 	$.each(allSkills, function(index, value) {
@@ -55,6 +56,7 @@ $(function(){
 		$newLI = $('<li><input type="checkbox" id="'+$cleanText+'" value="'+value+'" checked="checked" /> <label for="'+$cleanText+'">'+value+'</label></li>');
 		$skillsUL.append($newLI);
 	});
+	
 	// Attach the change event handler so they hide and show stuff when toggles
 	$('#skillsSection ul li input[type=checkbox]').change(function(){
 		// Find all work articles with $(this).attr('value') in their class list and show/hide them

@@ -24,7 +24,7 @@ h5 { font-size: 15px; line-height: 17px; }
 h6 { font-size: 14px; line-height: 16px; }
 
 .work h3:nth-child(2), h2:nth-child(2), .skills h3, dl dt, #academic article span.title {
-	color: #2E99B8; }
+	color: #2E99B8;}
 
 header h2 {
 	font-size: 23px; line-height: 25px;}
@@ -127,12 +127,12 @@ article .date:after {
 	margin-top: 30px;
 }
 
+/* We need nice size margins */
+@page {
+	margin: 3cm 2cm 4cm 2cm;
+}
 /* Print */
 @media print {
-	/* We need nice size margins */
-	@page {
-		/*margin: 3cm 2cm 4cm 2cm;*/
-	}
 	/*body {margin: 3cm 2cm 4cm 2cm;}*/
 	/* Don't allow page breaks inside articles, or any of the academic subsections */
 	article, #academic section { page-break-inside: avoid; }
