@@ -48,35 +48,39 @@ a:active {
 
 /* line 47, ../../sass/style.scss */
 #MainContainer {
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  -webkit-box-shadow: black 0px 10px 80px 0;
+  -moz-box-shadow: black 0px 10px 80px 0;
+  box-shadow: black 0px 10px 80px 0; }
 
-/* line 51, ../../sass/style.scss */
+/* line 52, ../../sass/style.scss */
 #MainContainer ul {
   list-style-type: disc;
   margin-left: 35px; }
 
-/* line 56, ../../sass/style.scss */
+/* line 57, ../../sass/style.scss */
 #MainContainer ul li {
   margin-bottom: 5px; }
 
-/* line 60, ../../sass/style.scss */
+/* line 61, ../../sass/style.scss */
 .logo {
+  float: right;
   display: block;
   padding: 0 0.5em;
   display: inline-block; }
 
-/* line 66, ../../sass/style.scss */
+/* line 68, ../../sass/style.scss */
 .logo img {
   height: 4rem;
   display: inline-block;
   margin-bottom: -2rem;
   padding-bottom: 1rem; }
 
-/* line 73, ../../sass/style.scss */
+/* line 75, ../../sass/style.scss */
 .logo a {
   color: #431579; }
 
-/* line 77, ../../sass/style.scss */
+/* line 79, ../../sass/style.scss */
 #MainNavigation {
   font-family: "Charlemagne Std", "Times New Roman", serif;
   font-size: 1.6rem;
@@ -87,19 +91,19 @@ a:active {
   width: 100%;
   background-color: #ffc; }
 
-/* line 88, ../../sass/style.scss */
+/* line 90, ../../sass/style.scss */
 nav .pageList {
   display: inline-block;
   margin: 0.5rem 0 0 0; }
 
-/* line 93, ../../sass/style.scss */
+/* line 95, ../../sass/style.scss */
 nav .pageList a {
   margin: 0 0.1em 0 0.6em;
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: #ffc; }
 
-/* line 100, ../../sass/style.scss */
+/* line 102, ../../sass/style.scss */
 nav .pageList a:hover {
   color: #039;
   border-width: 0 0 1px 0;
@@ -109,7 +113,7 @@ nav .pageList a:hover {
   -o-border-image: -o-linear-gradient(left, rgba(0, 51, 153, 0) 0%, #003399 20%, #003399 80%, rgba(0, 51, 153, 0) 100%) 100% 0 100% 0 stretch;
   border-image: linear-gradient(left, rgba(0, 51, 153, 0) 0%, #003399 20%, #003399 80%, rgba(0, 51, 153, 0) 100%) 100% 0 100% 0 stretch; }
 
-/* line 106, ../../sass/style.scss */
+/* line 108, ../../sass/style.scss */
 nav .pageList a.selected, nav .pageList a.selected:visited {
   color: #039;
   border-width: 0 0.2em 1px 0.2em;
@@ -119,7 +123,7 @@ nav .pageList a.selected, nav .pageList a.selected:visited {
   -o-border-image: -o-linear-gradient(left, rgba(0, 51, 153, 0) 0%, #003399 20%, #003399 80%, rgba(0, 51, 153, 0) 100%) 100% 10% 100% 10% stretch;
   border-image: linear-gradient(left, rgba(0, 51, 153, 0) 0%, #003399 20%, #003399 80%, rgba(0, 51, 153, 0) 100%) 100% 10% 100% 10% stretch; }
 
-/* line 112, ../../sass/style.scss */
+/* line 114, ../../sass/style.scss */
 .subtitle, legend {
   font-family: "Times New Roman", serif;
   font-size: 26pt;
@@ -129,33 +133,33 @@ nav .pageList a.selected, nav .pageList a.selected:visited {
   line-height: 1.5em;
   text-align: center; }
 
-/* line 122, ../../sass/style.scss */
+/* line 124, ../../sass/style.scss */
 #aboutMe span {
   margin: 500px 0 0 0;
   font-style: italic; }
 
-/* line 127, ../../sass/style.scss */
+/* line 129, ../../sass/style.scss */
 .portfolioItem h2 {
   margin-top: 15px;
   color: #330066; }
 
-/* line 132, ../../sass/style.scss */
+/* line 134, ../../sass/style.scss */
 .portfolioItem span {
   font-weight: bold; }
 
-/* line 136, ../../sass/style.scss */
+/* line 138, ../../sass/style.scss */
 .portfolioItem img {
   border: 2px solid #330066; }
 
-/* line 140, ../../sass/style.scss */
+/* line 142, ../../sass/style.scss */
 #contact {
   margin-top: 20px; }
 
-/* line 144, ../../sass/style.scss */
+/* line 146, ../../sass/style.scss */
 input[type="text"], textarea, frameset {
   width: 100%; }
 
-/* line 148, ../../sass/style.scss */
+/* line 150, ../../sass/style.scss */
 #sendMessage {
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -164,51 +168,51 @@ input[type="text"], textarea, frameset {
   color: #003399;
   font-size: 12pt; }
 
-/* line 157, ../../sass/style.scss */
+/* line 159, ../../sass/style.scss */
 textarea {
   height: 200px; }
 
-/* line 161, ../../sass/style.scss */
+/* line 163, ../../sass/style.scss */
 #contact .subtitle, legend {
   margin: 0 0 20px 0; }
 
-/* line 165, ../../sass/style.scss */
+/* line 167, ../../sass/style.scss */
 #contact p {
   margin: 5px; }
 
-/* line 169, ../../sass/style.scss */
+/* line 171, ../../sass/style.scss */
 #contact p span {
   font-weight: bold; }
 
-/* line 173, ../../sass/style.scss */
+/* line 175, ../../sass/style.scss */
 #contact p:last-of-type {
   margin-bottom: 25px; }
 
-/* line 177, ../../sass/style.scss */
+/* line 179, ../../sass/style.scss */
 #virtual table {
   margin: auto; }
 
-/* line 181, ../../sass/style.scss */
+/* line 183, ../../sass/style.scss */
 #virtual table td {
   padding: 5px; }
 
-/* line 185, ../../sass/style.scss */
+/* line 187, ../../sass/style.scss */
 .error {
   display: none;
   color: red;
   font-weight: bold; }
 
-/* line 191, ../../sass/style.scss */
+/* line 193, ../../sass/style.scss */
 .success {
   color: #006699;
   display: none;
   font-weight: bold; }
 
-/* line 197, ../../sass/style.scss */
+/* line 199, ../../sass/style.scss */
 #skypedetectionswf {
   height: 0; }
 
-/* line 201, ../../sass/style.scss */
+/* line 203, ../../sass/style.scss */
 footer p {
   text-align: right;
   font-size: 8pt;
