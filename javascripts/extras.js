@@ -16,35 +16,34 @@ $(document).ready(function() {
 		var testPattern = function(value, pattern) {   // Private Method
 			var regExp = new RegExp(pattern,"");
 			return regExp.test(value);
-		}
-		error = false;
+		};
+		var error = false,
+            senderEmail = $('#senderEmail').val(),
+            senderName = $('#senderName').val(),
+            message = $('#message').val();
 
-		senderEmail = $('#senderEmail').val();
-		senderName = $('#senderName').val();
-		message = $('#message').val();
-
-		if (senderEmail == '') {
+		if (senderEmail === '') {
 			error = true;
-			 $('#senderEmail').css('border-color', 'red');
+			$('#senderEmail').css('border-color', 'red');
 		} else if (!testPattern(senderEmail,"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])")) {
 			error = true;
-			 $('#senderEmail').css('border-color', 'red');
+			$('#senderEmail').css('border-color', 'red');
 		} else {
-			 $('#senderEmail').css('border-color', 'black');
+			$('#senderEmail').css('border-color', 'black');
 		}
-		if (senderName == '') {
+		if (senderName === '') {
 			error = true;
-			 $('#senderName').css('border-color', 'red');
+			$('#senderName').css('border-color', 'red');
 		} else {
-			 $('#senderName').css('border-color', 'black');
+			$('#senderName').css('border-color', 'black');
 		}
-		if (message == '') {
+		if (message === '') {
 			error = true;
-			 $('#message').css('border-color', 'red');
+			$('#message').css('border-color', 'red');
 		} else {
-			 $('#message').css('border-color', 'black');
+			$('#message').css('border-color', 'black');
 		}
-		if (error == true) {
+		if (error === true) {
 			$('#formError').css('display', 'block');
 		} else {
 			// Yay! Clear errors and send form!
@@ -72,6 +71,4 @@ $(document).ready(function() {
 			});
 		}
 	});
-
-	$.stellar();
 });

@@ -6,97 +6,93 @@
 * http://www.opensource.org/licenses/mit-license.php
 * 8/17/2011
 */
-
 /* Table of Content
 ==================================================
 	#Site Styles
 	#Page Styles
 	#Media Queries
 	#Font-Face */
-
 /* #Site Styles
 ================================================== */
-
 /* #Page Styles
 ================================================== */
-
 /* #Media Queries
 ================================================== */
+/* Smaller than standard 960 (devices and browsers) */
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 31, ../../sass/layout.scss */
+  #MainNavigation, .subtitle, legend, h2 {
+    font-size: 18pt; } }
+/* All Mobile Sizes (devices and browser) */
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 41, ../../sass/layout.scss */
+  body {
+    background-image: url("http://127.0.0.1/portfolio/Release/images/bg-small.png"); }
 
-	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {}
+  /* line 44, ../../sass/layout.scss */
+  #logo #name {
+    font-size: 37pt; }
 
-	/* Tablet Portrait size to standard 960 (devices and browsers) */
-	@media only screen and (min-width: 768px) and (max-width: 959px) {
-		#MainNavigation, .subtitle, legend, h2 {
-			font-size: 18pt;
-		}
-	}
+  /* line 47, ../../sass/layout.scss */
+  #MainNavigation, .subtitle, legend, h2 {
+    font-size: 11pt; }
 
-	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {	}
+  /* line 50, ../../sass/layout.scss */
+  #MainNavigation ul li {
+    margin: 0px 15px 0px 15px; }
 
-	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-	@media only screen and (min-width: 480px) and (max-width: 767px) {
-		body {
-			background-image: url("http://127.0.0.1/portfolio/Release/images/bg-small.png");
-		}
-		#logo #name {
-			font-size: 37pt;
-		}
-		#MainNavigation, .subtitle, legend, h2 {
-			font-size: 11pt;
-		}
-		#MainNavigation ul li {
-			margin: 0px 15px 0px 15px;
-		}
-		.portfolioItem div:first-of-type {
-			text-align: center;
-		}
-		.portfolioItem img, input[type="text"], textarea {
-			width: 95%;
-		}
-		fieldset {
-			padding-left: 10px;
-		}
-	}
+  /* line 53, ../../sass/layout.scss */
+  .portfolioItem div:first-of-type {
+    text-align: center; }
 
-	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {
-		body {
-			background-image: url("http://127.0.0.1/portfolio/Release/images/bg-tiny.png");
-		}
-		#MainContainer {
-			border-width: 2px;
-		}
-		#logo #name {
-			font-size: 32pt;
-		}
-		#MainNavigation, .subtitle, legend, h2 {
-			font-size: 9pt;
-		}
-		#MainNavigation ul li {
-			margin: 0px 5px 0px 5px;
-		}
-		.portfolioItem div:first-of-type {
-			text-align: center;
-		}
-		.portfolioItem img, input[type="text"], textarea {
-			width: 95%;
-		}
-		fieldset {
-			padding-left: 5px;
-		}
-	}
+  /* line 56, ../../sass/layout.scss */
+  .portfolioItem img, input[type="text"], textarea {
+    width: 95%; }
 
+  /* line 59, ../../sass/layout.scss */
+  fieldset {
+    padding-left: 10px; } }
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  /* line 66, ../../sass/layout.scss */
+  body {
+    background-image: url("http://127.0.0.1/portfolio/Release/images/bg-tiny.png"); }
 
+  /* line 69, ../../sass/layout.scss */
+  #MainContainer {
+    border-width: 2px; }
+
+  /* line 72, ../../sass/layout.scss */
+  #logo #name {
+    font-size: 32pt; }
+
+  /* line 75, ../../sass/layout.scss */
+  #MainNavigation, .subtitle, legend, h2 {
+    font-size: 9pt; }
+
+  /* line 78, ../../sass/layout.scss */
+  #MainNavigation ul li {
+    margin: 0px 5px 0px 5px; }
+
+  /* line 81, ../../sass/layout.scss */
+  .portfolioItem div:first-of-type {
+    text-align: center; }
+
+  /* line 84, ../../sass/layout.scss */
+  .portfolioItem img, input[type="text"], textarea {
+    width: 95%; }
+
+  /* line 87, ../../sass/layout.scss */
+  fieldset {
+    padding-left: 5px; } }
 /* #Font-Face
 ================================================== */
 /* 	This is the proper syntax for an @font-face file
 		Just create a "fonts" folder at the root,
 		copy your FontName into code below and remove
 		comment brackets */
-
 /*	@font-face {
 	    font-family: 'FontName';
 	    src: url('../fonts/FontName.eot');

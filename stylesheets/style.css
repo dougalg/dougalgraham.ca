@@ -1,206 +1,215 @@
-/* Basic styles that should apply to almost all pages.
-     Some parts overridden in the layout.css file
-     */
-
-body {
-	position: relative;
-	z-index: 1;
-}
-
-/* Fonts */
-@font-face {
-	font-family: 'OwahTagu';
-	src: url('../fonts/OwahTaguSiamNF.ttf');
-	font-weight: normal;
-	font-style: normal;
-}
+/* line 3, ../../sass/style.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 /* Styles */
+/* line 8, ../../sass/style.scss */
+#SkypeButton_Call_dougalgraham_1 img, #SkypeButton_Call_dougalgraham_1 p {
+  margin: 0 !important;
+  padding: 0 !important;
+  vertical-align: 0 !important; }
+
+/* line 14, ../../sass/style.scss */
+body {
+  background-color: #036; }
+
+/* line 18, ../../sass/style.scss */
+h1 {
+  font-size: 4em;
+  padding-top: 1em;
+  line-height: 0.71em;
+  margin: 0;
+  z-index: 10000;
+  color: #ffc;
+  text-align: right; }
+
+/* line 28, ../../sass/style.scss */
 acronym {
-	border-bottom: 1px dotted #000;
-}
+  border-bottom: 1px dotted #000; }
 
+/* line 32, ../../sass/style.scss */
 a, a:visited {
-	text-decoration: none;
-	color: #006699;
-}
+  text-decoration: none;
+  color: #006699;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
 
-a:hover {
-	color: #003399;
-}
+/* line 38, ../../sass/style.scss */
+a:hover, .logo a:hover {
+  color: #003399; }
 
+/* line 42, ../../sass/style.scss */
 a:active {
-	color: #999900;
-}
+  color: #999900; }
 
-#backgroundDiv {
-	background-image: url("../images/bg.png");
-	background-attachment: fixed;
-	padding-bottom: 40px;
-	margin-bottom: -25px;
-	z-index: 1;
-}
-
+/* line 47, ../../sass/style.scss */
 #MainContainer {
-	background-color: #FFFFFF;
-	border-width: 0px 5px 5px 5px;
-	border-color: #FFCC00;
-	border-style: solid;
-	-webkit-box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 10);
-	-moz-box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 10);
-	box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 10);
-	z-index: 1;
-}
+  background-color: #FFFFFF; }
 
+/* line 51, ../../sass/style.scss */
 #MainContainer ul {
-	list-style-type: disc;
-	margin-left: 35px;
-}
+  list-style-type: disc;
+  margin-left: 35px; }
 
+/* line 56, ../../sass/style.scss */
 #MainContainer ul li {
-	margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
-#services {
-	padding-top: 5px;
-}
+/* line 60, ../../sass/style.scss */
+.logo {
+  display: block;
+  padding: 0 0.5em;
+  display: inline-block; }
 
-#services h2 {
-	padding-top: 0px;
-	margin: 0px 0px 10px 0px;
-	text-align: center;
-}
+/* line 66, ../../sass/style.scss */
+.logo img {
+  height: 4rem;
+  display: inline-block;
+  margin-bottom: -2rem;
+  padding-bottom: 1rem; }
 
+/* line 73, ../../sass/style.scss */
+.logo a {
+  color: #431579; }
+
+/* line 77, ../../sass/style.scss */
 #MainNavigation {
-	z-index: 999;
-	font-family: "Cooper STD", sans-serif;
-	font-size: 22pt;
-	line-height: 20pt;
-	text-align: center;
-	position: fixed;
-	top: 0px;
-	border-bottom: 5px solid #FFCC00;
-	padding: 0px 0px 10px 0px;
-	margin: 0px;
-	width: inherit;
-	background-image: url("../images/bg-yellow.png");
-}
+  font-family: "Charlemagne Std", "Times New Roman", serif;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  border-bottom: 5px solid #FFCC00;
+  padding: 0.2em 0;
+  margin: 0;
+  width: 100%;
+  background-color: #ffc; }
 
-#MainNavigation ul {
-	margin: 15px 0px 0px 0px;
-}
+/* line 88, ../../sass/style.scss */
+nav .pageList {
+  display: inline-block;
+  margin: 0.5rem 0 0 0; }
 
-#MainNavigation ul li {
-	display: inline;
-	margin: 0px 30px 0px 30px;
-}
+/* line 93, ../../sass/style.scss */
+nav .pageList a {
+  margin: 0 0.1em 0 0.6em;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #ffc; }
 
-#logo {
-	padding: 80px 0px 40px 0px;
-	text-align: center;
-}
+/* line 100, ../../sass/style.scss */
+nav .pageList a:hover {
+  color: #039;
+  border-width: 0 0 1px 0;
+  -moz-border-image: -moz-linear-gradient(left, rgba(0, 51, 153, 0) 0%, #003399 20%, #003399 80%, rgba(0, 51, 153, 0) 100%) 100% 0 100% 0 stretch;
+  -webkit-border-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 51, 153, 0)), color-stop(20%, #003399), color-stop(80%, #003399), color-stop(100%, rgba(0, 51, 153, 0))) 100% 0 100% 0 stretch;
+  -webkit-border-image: -webkit-linear-gradient(left, rgba(0, 51, 153, 0) 0%, #003399 20%, #003399 80%, rgba(0, 51, 153, 0) 100%) 100% 0 100% 0 stretch;
+  -o-border-image: -o-linear-gradient(left, rgba(0, 51, 153, 0) 0%, #003399 20%, #003399 80%, rgba(0, 51, 153, 0) 100%) 100% 0 100% 0 stretch;
+  border-image: linear-gradient(left, rgba(0, 51, 153, 0) 0%, #003399 20%, #003399 80%, rgba(0, 51, 153, 0) 100%) 100% 0 100% 0 stretch; }
 
-#logo .name {
-	font-family: OwahTagu;
-	font-size: 44pt;
-	line-height: 10pt;
-	color: #330066;
-}
+/* line 106, ../../sass/style.scss */
+nav .pageList a.selected, nav .pageList a.selected:visited {
+  color: #039;
+  border-width: 0 0.2em 1px 0.2em;
+  -moz-border-image: -moz-linear-gradient(left, rgba(0, 51, 153, 0) 0%, #003399 20%, #003399 80%, rgba(0, 51, 153, 0) 100%) 100% 10% 100% 10% stretch;
+  -webkit-border-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 51, 153, 0)), color-stop(20%, #003399), color-stop(80%, #003399), color-stop(100%, rgba(0, 51, 153, 0))) 100% 10% 100% 10% stretch;
+  -webkit-border-image: -webkit-linear-gradient(left, rgba(0, 51, 153, 0) 0%, #003399 20%, #003399 80%, rgba(0, 51, 153, 0) 100%) 100% 10% 100% 10% stretch;
+  -o-border-image: -o-linear-gradient(left, rgba(0, 51, 153, 0) 0%, #003399 20%, #003399 80%, rgba(0, 51, 153, 0) 100%) 100% 10% 100% 10% stretch;
+  border-image: linear-gradient(left, rgba(0, 51, 153, 0) 0%, #003399 20%, #003399 80%, rgba(0, 51, 153, 0) 100%) 100% 10% 100% 10% stretch; }
 
+/* line 112, ../../sass/style.scss */
 .subtitle, legend {
-	font-family: "Cooper STD", sans-serif;
-	font-size: 26pt;
-	color: #003399;
-	margin: 40px 0px 40px 0px;
-	line-height: 25pt;
-	text-align: center;
-}
+  font-family: "Times New Roman", serif;
+  font-size: 26pt;
+  font-weight: bold;
+  color: #003399;
+  margin: 40px 0 40px 0;
+  line-height: 1.5em;
+  text-align: center; }
 
-#logo img {
-	padding: 0px 0px 10px 0px;
-}
-
+/* line 122, ../../sass/style.scss */
 #aboutMe span {
-	margin: 500px 0px 0px 0px;
-	font-style: italic;
-}
+  margin: 500px 0 0 0;
+  font-style: italic; }
 
+/* line 127, ../../sass/style.scss */
 .portfolioItem h2 {
-	margin-top: 15px;
-	color: #330066;
-}
+  margin-top: 15px;
+  color: #330066; }
 
+/* line 132, ../../sass/style.scss */
 .portfolioItem span {
-	font-weight: bold;
-}
+  font-weight: bold; }
 
+/* line 136, ../../sass/style.scss */
 .portfolioItem img {
-	border: 2px solid #330066;
-}
+  border: 2px solid #330066; }
 
+/* line 140, ../../sass/style.scss */
 #contact {
-	margin-top: 20px;
-}
+  margin-top: 20px; }
 
+/* line 144, ../../sass/style.scss */
 input[type="text"], textarea, frameset {
-	width: 100%;
-}
+  width: 100%; }
 
+/* line 148, ../../sass/style.scss */
 #sendMessage {
-	 -moz-border-radius: 15px;
-	 -webkit-border-radius: 15px;
-	 border-radius: 15px;
-	 background-color: #FFCC00;
-	 color: #003399;
-	 font-size: 12pt;
-}
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background-color: #FFCC00;
+  color: #003399;
+  font-size: 12pt; }
 
+/* line 157, ../../sass/style.scss */
 textarea {
-	height: 200px;
-}
+  height: 200px; }
 
+/* line 161, ../../sass/style.scss */
 #contact .subtitle, legend {
-	margin: 0px 0px 20px 0px;
-}
+  margin: 0 0 20px 0; }
 
+/* line 165, ../../sass/style.scss */
 #contact p {
-	margin: 5px;
-}
+  margin: 5px; }
 
+/* line 169, ../../sass/style.scss */
 #contact p span {
-	font-weight: bold;
-}
+  font-weight: bold; }
 
+/* line 173, ../../sass/style.scss */
 #contact p:last-of-type {
-	margin-bottom: 25px;
-}
+  margin-bottom: 25px; }
 
+/* line 177, ../../sass/style.scss */
 #virtual table {
-	margin: auto;
-}
+  margin: auto; }
 
+/* line 181, ../../sass/style.scss */
 #virtual table td {
-	padding: 5px;
-}
+  padding: 5px; }
 
+/* line 185, ../../sass/style.scss */
 .error {
-	display: none;
-	color: red;
-	font-weight: bold;
-}
+  display: none;
+  color: red;
+  font-weight: bold; }
 
+/* line 191, ../../sass/style.scss */
 .success {
-	color: #006699;
-	display: none;
-	font-weight: bold;
-}
+  color: #006699;
+  display: none;
+  font-weight: bold; }
 
+/* line 197, ../../sass/style.scss */
 #skypedetectionswf {
-	height: 0px;
-}
+  height: 0; }
 
+/* line 201, ../../sass/style.scss */
 footer p {
-	text-align: right;
-	font-size: 8pt;
-	margin: 0px;
-}
+  text-align: right;
+  font-size: 8pt;
+  margin: 0; }
