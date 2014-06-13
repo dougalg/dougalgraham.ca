@@ -22,4 +22,4 @@
 
             <p>If you'd like to see what I've written, head on over to <a href="http://www.tfiaa.com/blog">my blog</a>, or take a look at <a href="http://th.linkedin.com/in/dougalg">my LinkedIn profile</a>.</p>
 
-            <p>I'm worried about the environment, and want to work for a company who cares about that too. For example, by making it easy for employees to cycle to work, or ride-share.</p>
+            <p>I care about about the environment, and want to work for a company who cares about that too. For example, by making it easy for employees to cycle to work, or ride-share.</p>

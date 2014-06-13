@@ -79,7 +79,7 @@
                         </div><div class="halfsize">
                             <h2><a href="http://www.type-thai.net">TypeThai</a></h2>
                             <p>A Thai language input method for Mac OS X.</p>
-                            <p>I used finite-state technology and objecive-c to develop an automatic guesser to redict which Thai word the user intended.</p>
+                            <p>I used finite-state technology and objecive-c to develop an automatic guesser to predict which Thai word the user intended.</p>
                             <p>(Not an easy feat)</p>
 
                             <ul class="keywords">

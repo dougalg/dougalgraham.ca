@@ -36,10 +36,7 @@
 
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
 	<link rel="stylesheet" href="stylesheets/style.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
 
 	<!--[if lt IE 8]>
 		<link rel="stylesheet" type="text/css" href="stylesheets/ie7.css" media="screen, projection" />
