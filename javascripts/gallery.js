@@ -5,7 +5,8 @@ var galleries = (function(){
                 images = div.getElementsByClassName('gallery-item'),
                 currentImage = 0,
                 numImages = images.length,
-                changeInterval = 500;
+                changeInterval = 500,
+                clickable = true;
             var captions = Array();
 
             // Set up the footer (caption + buttons)
@@ -69,7 +70,7 @@ var galleries = (function(){
                 }, opts.delay || 10);
             }
 
-            function moveL(element, delta, duration, to, callback) {
+            function move(element, delta, duration, to, callback) {
                 to = to || 500;
                 var old_left = parseInt(element.style.left, 10);
                 animate({
@@ -82,61 +83,50 @@ var galleries = (function(){
                 }, callback);
             }
 
-            function moveR(element, delta, duration, to, callback) {
-                to = to || 500;
-                var old_left = parseInt(element.style.left, 10);
-                animate({
-                    delay: 10,
-                    duration: duration || 1000, // 1 sec by default
-                    delta: delta,
-                    step: function(delta) {
-                        element.style.left = old_left-(to*delta) + "px";
+            moveImage = function moveImageF(curImg, nxtImg, side) {
+                if (clickable) {
+                    clickable = false;
+                    var prevImg = images[curImg],
+                        halfsize = container.offsetWidth/2;
+
+                    var newImg = images[nxtImg];
+                    newImg.style.display = 'inline-block';
+
+                    if (side === 'left') {
+                        container.style.left = '0px';
+                        container.appendChild(newImg);
+                    } else {
+                        halfsize = -halfsize;
+                        container.style.left = halfsize+'px';
+                        container.insertBefore(newImg, prevImg);
                     }
-                }, callback);
-            }
+
+                    move(container, function(p) {return p;}, 500, -halfsize, function() {
+                        prevImg.style.display = 'none';
+                        div.appendChild(prevImg);
+                        container.style.left = '0px';
+                        clickable = true;
+                    });
+
+                    updateCaption();
+                }
+            };
 
             nextImage = function nextImageF() {
-                var prevImg = images[currentImage],
-                    halfsize = (container.offsetWidth/2);
-
+                prevImg = currentImage;
                 currentImage = currentImage + 1;
-
                 if (currentImage >= images.length)
                     currentImage = 0;
 
-                var newImg = images[currentImage];
-                newImg.style.display = 'inline-block';
-                container.style.left = '0px';
-                container.appendChild(newImg);
-
-                moveL(container, function(p) {return p;}, 1000, -halfsize, function() {
-                    prevImg.style.display = 'none';
-                    div.appendChild(prevImg);
-                    container.style.left = '0px';
-                });
-
-                updateCaption();
+                moveImage(prevImg, currentImage, 'left');
             };
             var prevImage = function prevImageF() {
-                var prevImg = images[currentImage],
-                    halfsize = (container.offsetWidth/2);
-
+                prevImg = currentImage;
                 currentImage = currentImage - 1;
                 if (currentImage < 0)
                     currentImage = images.length - 1;
 
-                var newImg = images[currentImage];
-                newImg.style.display = 'inline-block';
-                container.style.left = -halfsize+'px';
-                container.insertBefore(newImg, prevImg);
-
-                moveR(container, function(p) {return p;}, 1000, -halfsize, function() {
-                    prevImg.style.display = 'none';
-                    div.appendChild(prevImg);
-                    container.style.left = '0px';
-                });
-
-                updateCaption();
+                moveImage(prevImg, currentImage, 'right');
             };
 
             prevButton.addEventListener('click', prevImage, false);
