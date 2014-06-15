@@ -2,8 +2,10 @@
     $pages = Array('about' => 'About Me',
                    'projects' => 'Projects',
                    'contact' => 'Contact');
+    $other_pages = Array('VenU' => 'VenU');
+
     $current_page = isset($_GET['p']) ? $_GET['p'] : '';
-    if (!array_key_exists($current_page, $pages))
+    if (!array_key_exists($current_page, $pages) && !array_key_exists($current_page, $other_pages))
         $current_page = 'about';
 ?>
 <!DOCTYPE html>
@@ -71,6 +73,7 @@
 		</footer>
 	</div>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="javascripts/extras.js"></script>
+    <script src="javascripts/extras.js"></script>
+    <script src="javascripts/gallery.js"></script>
 </body>
 </html>

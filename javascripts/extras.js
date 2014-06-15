@@ -1,6 +1,8 @@
 // Smooth Scroll
 // From http://www.sycha.com/jquery-smooth-scrolling-internal-anchor-links
 $(document).ready(function() {
+    $('.no-js').hide();
+
 	// Scrolling offset should be same as the height of the MainNavigation element
 	$scrollHeight = $("#MainNavigation").outerHeight(true);
 	$(".scroll").click(function(event){
