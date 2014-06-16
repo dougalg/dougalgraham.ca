@@ -25,6 +25,8 @@
 
         <div class="gallery-item" data-caption="A difficult phrase-matching drag-and-drop test" data-image="images/portfolio/ceem-gallery/phrase_challenge.png"></div>
 
+        <div class="gallery-item" data-caption="The student area is fully bilingual in Thai and English" data-image="images/portfolio/ceem-gallery/thai-english.png"></div>
+
         <div class="gallery-item" data-caption="A hangman game with keystroke capture" data-image="images/portfolio/ceem-gallery/hangman.png"></div>
 
         <div class="gallery-item" data-caption="An interactive searchable word list of important Engineering words" data-image="images/portfolio/ceem-gallery/word_list.png"></div>
