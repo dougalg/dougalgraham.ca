@@ -29,23 +29,31 @@
 
         <div class="gallery-item" data-caption="A hangman game with keystroke capture" data-image="images/portfolio/ceem-gallery/hangman.png"></div>
 
-        <div class="gallery-item" data-caption="An interactive searchable word list of important Engineering words" data-image="images/portfolio/ceem-gallery/word_list.png"></div>
+        <div class="gallery-item" data-caption="Interactive list of important Engineering words" data-image="images/portfolio/ceem-gallery/word_list.png"></div>
 
         <div class="gallery-item" data-caption="Word details show sample phrases and similar words" data-image="images/portfolio/ceem-gallery/word_list_details.png"></div>
 
         <div class="gallery-footer">A high-speed reading game</div>
     </div>
 
-    <p>CEEM is a fully responsive online language learning plaform for English as a Second/Foreign Language learners to learn engineering English. I used Python to manage the data, and set up a small JSON API to make the data accessible by AJAX to the frontend.</p>
+    <p><a href="htp://crs2.kmutt.ac.th/ceem">CEEM</a> is a <em>fully responsive</em> online language learning plaform for English as a Second/Foreign Language learners to learn engineering English. I used Python to manage the data, and set up a small JSON API to make the data accessible by AJAX to the frontend.</p>
 
     <p>To boost student engagement, I tried to make activities that were fast-moving, using Javascript and AJAX to reduce response-times and keep the activities interactive.</p>
 
-    <h2>How can I help?</h2>
+    <p>My back-end experience isn't just limited to Python. I have developed numerous MySQL driven content management systems using PHP for <a href="http://www.wamsb.org">WAMSB</a>, <a href="http://crs2.kmutt.ac.th">KMUTT-CRS</a>, and others.</p>
+
+    <h2>How I can help</h2>
 
     <h3>Classroom management software</h3>
     <p>Classroom management requires clarity of layout and a lot of database interaction. Using AJAX, and semantic HTML and CSS, as I have done in the past, I believe that I could contribute strongly to making updates to the classroom management interface clear, easy to use, and responsive across a variety of devices.</p>
 
     <h3>Dashboard Reporting</h3>
     <p>This is an area where I hope I could have a chance to expand my skills. I do not have experience with layout out graphics and charts in HTML/SVG/Javascript. I'm not sure what technique you use to display the charts, but I hope it is SCG+Javascript! If it is, I would really enjoy the chance to take my skills to another level by working on this part of your software.</p>
+
+    <h2>Thanks</h2>
+
+    <p>I really appreciate you taking the time to read my application, and I hope you <a href="mailto:dougalg@gmail.com">get in touch</a> soon.</p>
+
+    <p>In the mean time, why not take a look at my <a href="/portfolio">larger portfolio</a>, my <a href="http://www.linkedin.com/in/dougalg">LinkedIn</a>, or <a href="http://github.com/dougalg">GitHub</a>?</p>
 
 </article>
