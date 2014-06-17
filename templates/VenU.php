@@ -17,7 +17,7 @@
     <h2>My Work</h2>
 
     <div class="gallery">
-        <div class="no-js">Turn on Javascript to see four more images. Or, visit <a href="htp://crs2.kmutt.ac.th/ceem">CEEM</a> to see the site in action!</div>
+        <div class="no-js">Turn on Javascript to see four more images. Or, visit <a href="http://crs2.kmutt.ac.th/ceem">CEEM</a> to see the site in action!</div>
 
         <div class="gallery-container">
         </div>
@@ -36,11 +36,11 @@
         <div class="gallery-footer">A high-speed reading game</div>
     </div>
 
-    <p><a href="htp://crs2.kmutt.ac.th/ceem">CEEM</a> is a <em>fully responsive</em> online language learning plaform for English as a Second/Foreign Language learners to learn engineering English. I used Python to manage the data, and set up a small JSON API to make the data accessible by AJAX to the frontend.</p>
+    <p><a href="http://crs2.kmutt.ac.th/ceem">CEEM</a> is a <em>fully responsive</em> online language learning plaform for English as a Second/Foreign Language learners to learn engineering English. I used Python to manage the data, and set up a small JSON API to make the data accessible by AJAX to the frontend.</p>
 
     <p>To boost student engagement, I tried to make activities that were fast-moving, using Javascript and AJAX to reduce response-times and keep the activities interactive.</p>
 
-    <p>My back-end experience isn't just limited to Python. I have developed numerous MySQL driven content management systems using PHP for <a href="http://www.wamsb.org">WAMSB</a>, <a href="http://crs2.kmutt.ac.th">KMUTT-CRS</a>, and others.</p>
+    <p>My back-end experience isn't just limited to Python. I have developed numerous MySQL driven content management systems using PHP for <a href="http://www.wamsb.org">WAMSB</a>, <a href="http://crs2.kmutt.ac.th">KMUTT-CRS</a>, and <a href="/portfolio">others</a>.</p>
 
     <h2>How I can help</h2>
 
