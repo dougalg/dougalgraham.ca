@@ -36,7 +36,7 @@
         <div class="gallery-footer">A high-speed reading game</div>
     </div>
 
-    <p><a href="http://crs2.kmutt.ac.th/ceem">CEEM</a> is a <em>fully responsive</em> online language learning plaform for English as a Second/Foreign Language learners to learn engineering English. I used Python to manage the data, and set up a small JSON API to make the data accessible by AJAX to the frontend.</p>
+    <p><a href="http://crs2.kmutt.ac.th/ceem">CEEM</a> is a <em>fully responsive</em> online language learning platform for English as a Second/Foreign Language learners to learn engineering English. I used Python to manage the data, and set up a small JSON API to make the data accessible by AJAX to the frontend.</p>
 
     <p>To boost student engagement, I tried to make activities that were fast-moving, using Javascript and AJAX to reduce response-times and keep the activities interactive.</p>
 
@@ -48,7 +48,7 @@
     <p>Classroom management requires clarity of layout and a lot of database interaction. Using AJAX, and semantic HTML and CSS, as I have done in the past, I believe that I could contribute strongly to making updates to the classroom management interface clear, easy to use, and responsive across a variety of devices.</p>
 
     <h3>Dashboard Reporting</h3>
-    <p>This is an area where I hope I could have a chance to expand my skills. I do not have experience with layout out graphics and charts in HTML/SVG/Javascript. I'm not sure what technique you use to display the charts, but I hope it is SCG+Javascript! If it is, I would really enjoy the chance to take my skills to another level by working on this part of your software.</p>
+    <p>This is an area where I hope I could have a chance to expand my skills. I do not have experience with layout out graphics and charts in HTML/SVG/Javascript. I'm not sure what technique you use to display the charts, but I hope it is SVG+Javascript! If it is, I would really enjoy the chance to take my skills to another level by working on this part of your software.</p>
 
     <h2>Thanks</h2>
 
