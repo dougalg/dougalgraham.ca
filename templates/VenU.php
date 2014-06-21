@@ -40,7 +40,7 @@
 
     <p>To boost student engagement, I tried to make activities that were fast-moving, using Javascript and AJAX to reduce response-times and keep the activities interactive.</p>
 
-    <p>My back-end experience isn't just limited to Python. I have developed numerous MySQL driven content management systems using PHP for <a href="http://www.wamsb.org">WAMSB</a>, <a href="http://crs2.kmutt.ac.th">KMUTT-CRS</a>, and <a href="/portfolio">others</a>.</p>
+    <p>My back-end experience isn't just limited to Python. I have developed numerous MySQL driven content management systems using PHP for <a href="http://www.wamsb.org">WAMSB</a>, and <a href="/portfolio">others</a>.</p>
 
     <h2>How I can help</h2>
 
