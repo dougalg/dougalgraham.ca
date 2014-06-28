@@ -4,7 +4,7 @@
                    'contact' => 'Contact');
     $other_pages = Array('VenU' => 'VenU');
 
-    $current_page = isset($_GET['p']) ? $_GET['p'] : '';
+    $current_page = isset($_GET['p']) ? strtolower($_GET['p']) : '';
     if (!array_key_exists($current_page, $pages) && !array_key_exists($current_page, $other_pages))
         $current_page = 'about';
 ?>

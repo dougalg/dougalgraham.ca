@@ -50,6 +50,9 @@
     <h3>Dashboard Reporting</h3>
     <p>This is an area where I hope I could have a chance to expand my skills. I do not have experience with layout out graphics and charts in HTML/SVG/Javascript. I'm not sure what technique you use to display the charts, but I hope it is SVG+Javascript! If it is, I would really enjoy the chance to take my skills to another level by working on this part of your software.</p>
 
+    <h3>PHP Programming</h3>
+    <p>I have many years experience developing complex CMS in PHP. I love solving challenging problems, setting up servers and tinkering with configurations. I used PHP extensively in my work at WAMSB to add additional functionality to object-oriented systems. Similarly I have developed a minimal PHP CMS for KMUTT CRS to use on their website.</p>
+
     <h2>Thanks</h2>
 
     <p>I really appreciate you taking the time to read my application, and I hope you <a href="mailto:dougalg@gmail.com">get in touch</a> soon.</p>
