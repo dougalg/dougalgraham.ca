@@ -2,7 +2,8 @@
     $pages = Array('about' => 'About Me',
                    'projects' => 'Projects',
                    'contact' => 'Contact');
-    $other_pages = Array('venu' => 'venu');
+    $other_pages = Array('venu' => 'venu',
+                         'airvm' => 'airvm');
 
     $current_page = isset($_GET['p']) ? strtolower($_GET['p']) : '';
     if (!array_key_exists($current_page, $pages) && !array_key_exists($current_page, $other_pages))
