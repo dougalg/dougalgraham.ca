@@ -50,4 +50,6 @@
 
     <p>I really look forward to hearing from you, and would be happy to talk with you any time. If there's anything you'd like to know about me, please don't hesitate to <a href="mailt:dougalg@gmail.com">get in touch</a>.
 
+    <p>By the way, I'll be in the area soon. Why don't we meet up?</p>
+
 </article>
