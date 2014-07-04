@@ -12,7 +12,7 @@
 
     <p>Similarly, I've made it a point to always have an understanding of all the technologies involved in web development from Apache and Lighttpd setups, to MySQL, to both back and front-end coding languages. These days, I'm working on improving my Javascript development skills and learning to work with SVG.</p>
 
-    <p>I normally develop on a Mac, but I am comfortable spending a lot of time in the terminal, so I think I'd be right at home on Unix.</p>
+    <p>I normally develop on a Mac, and spending a lot of time in the terminal, so I think I'll be right at home on Unix.</p>
 
     <h2 id="work">My Work</h2>
 
@@ -44,7 +44,7 @@
 
     <h2>What I'd like to do</h2>
 
-    <p>Right now I'm looking to join a team that is working hard to create excellent products where I can learn more about development on a team, be exposed to new ways of doing things, and hopefully occasionally share some of my own ideas.</p>
+    <p>Right now I'm looking to join a company that is working hard to create excellent products where I can learn about developing software in a team, get exposure to new ways of doing things, and hopefully be able to share some of my own ideas.</p>
 
     <p>Specifically, I would be very interested in working in development of your RESTful api. API development is an area in which I think I could make a useful contribution. On a small scale, I have developed REST apis for several websites I have worked on to facilitate administration via AJAX+JSON, and I'd love to move up to a larger scale.</p>
 
