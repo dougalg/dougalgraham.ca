@@ -8,7 +8,7 @@
     <p>I have just returned to Montreal from Thailand, and am looking for a place where I can settle down and spend my time making great web software. (As a native Newfoundlander I'd love to relocate to the maritimes)</p>
 
     <h2>Fitting In</h2>
-    <p>I love learning new technologies, and enjoy a bit of <a target="_new" href="//github.com/dougalg">coding</a> <a target="_new" href="//colortext.tfiaa.com">in my free time</a> as well. Initially I learned object-oriented PHP while working at WAMSB, but once I first saw Python, I had to learn it. Now, I am comfortable programming in both langauges, and considering trying out Ruby.</p>
+    <p>I love learning new technologies, and enjoy a bit of <a target="_new" href="//github.com/dougalg">coding</a> <a target="_new" href="//colortext.tfiaa.com">in my free time</a> as well. Initially I learned object-oriented PHP while working at WAMSB, but once I first saw Python, I had to learn it. Now, I am comfortable programming in both languages, and considering trying out Ruby.</p>
 
     <p>Similarly, I've made it a point to always have an understanding of all the technologies involved in web development from Apache and Lighttpd setups, to MySQL, to both back and front-end coding languages. These days, I'm working on improving my Javascript development skills and learning to work with SVG.</p>
 
