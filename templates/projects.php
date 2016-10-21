@@ -3,7 +3,7 @@
 
                     <div class="portfolioItem clearfix" id="snake3D">
                         <div class="halfsize">
-                            <img src="images/portfolio/ceem-square.png" width="100%" title="Snake 3D" />
+                            <img src="images/portfolio/snake.png" width="100%" title="Snake 3D" />
                         </div><div class="halfsize">
                             <h2><a href="http://snake.tfiaa.com">Snake 3D</a></h2>
 
