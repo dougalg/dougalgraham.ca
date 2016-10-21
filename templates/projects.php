@@ -1,12 +1,26 @@
                 <article>
                     <h1 class="subtitle">Web</h1>
 
+                    <div class="portfolioItem clearfix" id="snake3D">
+                        <div class="halfsize">
+                            <img src="images/portfolio/ceem-square.png" width="100%" title="Snake 3D" />
+                        </div><div class="halfsize">
+                            <h2><a href="http://snake.tfiaa.com">Snake 3D</a></h2>
+
+                            <p>A 3D Snake game.</p>
+
+                            <ul class="keywords">
+                                <li>JavaScript</li><li>Three.js</li><li>Canvas</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <div class="portfolioItem clearfix" id="lessonRepo">
                         <div class="halfsize">
                             <img src="images/portfolio/ceem-square.png" width="100%" title="CEEM" />
                         </div><div class="halfsize">
                             <h2><a href="http://crs2.kmutt.ac.th/ceem">CEEM</a></h2>
-    
+
                             <p>Online learning platform.</p>
 
                             <p>Online activities for students to learn vocabulary, phrases, and real usage.</p>
@@ -56,7 +70,7 @@
                         </div>
                     </div>
                 </article>
-                
+
                 <article>
                     <h1 class="subtitle">Applications</h1>
                     <div class="portfolioItem clearfix" id="TypeThai">
