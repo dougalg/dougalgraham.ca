@@ -118,7 +118,7 @@ article .date:after {
 .horizontal-list ul li:after {
 	content: ',';}
 .horizontal-list ul li:nth-last-child(2):after {
-	content: ',and ';}
+	content: ', and ';}
 .horizontal-list ul li:nth-last-child(1):after {
 	content: '.';}
 .work-details {
@@ -195,7 +195,7 @@ article .date:after {
 		line-height: 1.3em;}
 	header h2 {
 		font-size: 20pt; }
-	h3 { 
+	h3 {
 		font-size: 18pt;
 		font-weight: bold; }
 	h4 {
