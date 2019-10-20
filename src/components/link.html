@@ -1,0 +1,49 @@
+{% if true != extLinkIsLoaded %}
+{%- assign extLinkIsLoaded = true -%}
+<style type="text/css">
+a .icon {
+  display: inline-flex;
+  height: 1em;
+  width: 1em;
+  align-self: baseline;
+  top: 0.125em;
+  position: relative;
+}
+
+a:hover .icon--external-link .arrow,
+a:focus .icon--external-link .arrow {
+  animation-name: wiggle;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wiggle {
+  0% {
+		transform: translate(0, 0);
+		opacity: 1
+  }
+  65% {
+		transform: translate(50%, -50%);
+		opacity: 0;
+	}
+	66% {
+		transform: translate(-50%, +50%);
+		opacity: 0;
+	}
+	66% {
+		transform: translate(-50%, +50%);
+		opacity: 0.5;
+	}
+}
+</style>
+{% endif %}
+
+<a
+  href="{{ href }}"
+  {% if isExternal %}target="_blank" rel="noopener"{% endif %}
+>
+  {{ text }}
+  {% if isExternal %}
+		{% include ../icons/external-link.html %}
+  {% endif %}
+</a>

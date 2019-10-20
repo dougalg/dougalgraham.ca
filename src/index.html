@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>Dougal Graham's CV</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/cv.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div class="container">
+		<div class="sixteen columns">
+			<article>
+				<div class="row">
+					<header class="ten columns alpha">
+						<hgroup>
+							<h1>Dougal Graham</h1>
+							<h2>Web Developer</h2>
+						</hgroup>
+					</header>
+					<div id="contact-info" class="six columns clearfix omega">
+						<dl>
+							<dt>Phone</dt>
+							<dd>+66 (0) 98-282-3630</dd>
+							<dt>Email</dt>
+							<dd><a href="mailto:dougalg@gmail.com">dougalg@gmail.com</a></dd>
+							<dt><img class="github-mark" src="images/github/PNG/GitHub-Mark-32px.png" alt="The github octocat logo"></dt>
+                            <dd>
+								{% include ./components/link.html, href: "https://www.github.com/dougalg", text: "dougalg", isExternal: true %}
+							</dd>
+							<dt class="PDF-Link">PDF</dt>
+							<dd class="PDF-Link"><a href="print_pdf.php">Download CV</a></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="row">
+					<div id="exp_and_ed" class="eleven columns alpha">
+						<section id="experience">
+							<h2>Experience</h2>
+							<article class="work js-skills--hideable">
+								<hgroup>
+									<h3 class="title">Senior Developer (Remote)</h3>
+									<h3 class="employer">
+										{% include ./components/link.html, href: "https://viafoura.com/", text: "Viafoura", isExternal: true %}
+									</h3>
+								</hgroup>
+								<span class="date start">Sep. 2018</span>
+								<span class="date end">Present</span>
+								<p class="work-details">
+									Lead accessibility efforts across the Viafoura product space.
+									Work with team members during shared hours to develop features at a high level of quality.
+									Mentor and perform code reviews for teammates.
+									Work with teammates to develop plans for complex features.
+									Developed an integration test framework which drastically increased the frequency with which bugs were caught in development.
+								</p>
+								<footer class="skills horizontal-list">
+									<h3>Key Skills</h3>
+									<ul>
+                                        <li>Mentoring</li>
+                                        <li>Accessibility</li>
+										<li>JavaScript</li>
+										<li>PHP</li>
+										<li>Java</li>
+										<li>CSS</li>
+										<li>HTML</li>
+										<li>Vue</li>
+									</ul>
+								</footer>
+							</article>
+							<article class="work js-skills--hideable">
+								<hgroup>
+									<h3 class="title">Front-end Team Lead</h3>
+									<h3 class="employer">
+										{% include ./components/link.html, href: "https://viafoura.com/", text: "Viafoura", isExternal: true %}
+									</h3>
+								</hgroup>
+								<span class="date start">Jul. 2015</span>
+								<span class="date end">Sep. 2018</span>
+								<p class="work-details">
+									Lead weekly planning scrums.
+									Develop plans to ensure new features are developed effeciantly and with high quality.
+									Develop and maintain processes (eg CI) to ensure code quality and reliablity using tools to automate linting, testing, and code coverage requirements.
+									Mentor and and work with team members to develop style guides, and maintain code efficiency.
+									Participate in candidate interviews.
+								</p>
+								<footer class="skills horizontal-list">
+									<h3>Key Skills</h3>
+									<ul>
+                                        <li>Mentoring</li>
+                                        <li>Continuous integration</li>
+										<li>JavaScript</li>
+										<li>PHP</li>
+										<li>Java</li>
+										<li>Eslint</li>
+										<li>GitHub Hooks</li>
+										<li>Jenkins</li>
+										<li>Istanbul</li>
+										<li>Webpack</li>
+										<li>CSS</li>
+										<li>HTML</li>
+										<li>Vue</li>
+									</ul>
+								</footer>
+							</article>
+							<article class="work js-skills--hideable">
+								<hgroup>
+									<h3 class="title">Product Team Developer</h3>
+									<h3 class="employer">
+										{% include ./components/link.html, href: "https://viafoura.com/", text: "Viafoura", isExternal: true %}
+									</h3>
+								</hgroup>
+								<span class="date start">Sep. 2014</span>
+								<span class="date end">Jul. 2015</span>
+								<p class="work-details">Work in a team to develop and maintain key client-facing software. Quickly respond to and resolve bug reports, by isolating and fixing issues in the software, or liasing with relevant team members to ensure bug resolution. Implement new features, write tests, and ensure product stability and validity. Develop features in tandem with other team members.</p>
+								<footer class="skills horizontal-list">
+									<h3>Key Skills</h3>
+									<ul>
+										<li>JavaScript</li>
+										<li>PHP</li>
+										<li>Java</li>
+										<li>Backbone</li>
+										<li>Marionette</li>
+										<li>Git</li>
+										<li>CSS</li>
+										<li>HTML</li>
+										<li>Vue</li>
+									</ul>
+								</footer>
+							</article>
+							<article class="work js-skills--hideable">
+								<hgroup>
+									<h3 class="title">Lecturer and Researcher</h3>
+									<h3 class="employer">King Mongkut's University of Technology Thonburi</h3>
+								</hgroup>
+								<span class="date start">Oct. 2012</span>
+								<span class="date end">Aug. 2014</span>
+								<p class="work-details">Conducted corpus research to develop a useful understanding of context-specific language use. Developed an online learning platform for engineering students learning English. Helped design questions for the Test of English for Thai Engineers and Technologists (TETET).</p>
+								<footer class="skills horizontal-list">
+									<h3>Key Skills</h3>
+									<ul>
+										<li>Python</li>
+										<li>CSS</li>
+										<li>HTML</li>
+										<li>JavaScript</li>
+									</ul>
+								</footer>
+							</article>
+						</section>
+
+						<section id="projects" class="eleven columns alpha">
+							<h2>Projects</h2>
+							<article class="work">
+								<h3><a target="_blank" rel="noopener" href="https://github.com/dougalg/pan-handler">Pan Handler</a></h3>
+								<p class="work-details">
+									An "as-simple-as-possible" pan and zoom library for canvas 2D.
+									Optional functionality is exposed through plugins. Published on NPM as
+									<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/@dougalg/pan-handler">@dougalg/pan-handler</a>.
+								</p>
+								<footer class="tech horizontal-list">
+									<h3>Tech</h3>
+									<ul>
+										<li>TypeScript</li>
+										<li>NPM</li>
+									</ul>
+								</footer>
+							</article>
+							<article class="work">
+								<h3><a target="_blank" rel="noopener" href="https://github.com/dougalg/3D-Snake">3D Snake</a></h3>
+								<p class="work-details">
+									An implementation of the classic Snake arcade game in a 3D space.
+								</p>
+								<footer class="tech horizontal-list">
+									<h3>Tech</h3>
+									<ul>
+										<li>JavaScript</li>
+										<li>ThreeJS</li>
+									</ul>
+								</footer>
+							</article>
+							<article class="work">
+								<h3><a target="_blank" rel="noopener" href="http://crs2.kmutt.ac.th/ceem">CEEM</a></h3>
+								<p class="work-details">
+									CEEM is a student
+									vocabulary learning tool based on applied linguistics research focusing on technical engineering
+									vocabulary. Includes an api written in Python as well as an interactive frontend written in JavaScript.
+								</p>
+								<footer class="tech horizontal-list">
+									<h3>Tech</h3>
+									<ul>
+										<li>JavaScript</li>
+										<li>CSS</li>
+										<li>HTML</li>
+										<li>Python 3</li>
+										<li>MySQL</li>
+										<li>OpenID</li>
+									</ul>
+								</footer>
+							</article>
+							<article class="work">
+								<h3><a target="_blank" rel="noopener" href="http://type-thai.net">Type-Thai</a></h3>
+								<p class="work-details">
+									An MacOS input method for Thai. A user can type romanized Thai, and te input method will
+									convert it to Thai characters. This was inspired by standard Japanese input methods which
+									use romanization. This project is no longer maintained.
+								</p>
+								<footer class="tech horizontal-list">
+									<h3>Tech</h3>
+									<ul>
+										<li>XFST (Finite-state transducers)</li>
+										<li>Objective-C</li>
+									</ul>
+								</footer>
+							</article>
+							<article class="work">
+								<h3><a target="_blank" rel="noopener" href="http://crs2.kmutt.ac.th/Key-BNC/">Key-BNC</a></h3>
+								<p class="work-details">
+									A tool to help applied linguistics researchers easily perform a variety of statistical
+									word frequency analyses against data from the British National Corpus (BNC).
+								</p>
+								<footer class="tech horizontal-list">
+									<h3>Tech</h3>
+									<ul>
+										<li>Python 3</li>
+									</ul>
+								</footer>
+							</article>
+							<article class="work">
+								<h3>The Lesson Repository</h3>
+								<p class="work-details">
+									A tool for English teachers in Japan to share lesson plans and lesson materials. Developed a theme using
+									Wordpress with file upload, and login functionality.
+								</p>
+								<footer class="tech horizontal-list">
+									<h3>Tech</h3>
+									<ul>
+										<li>Wordpress</li>
+										<li>HTML</li>
+										<li>CSS</li>
+										<li>PHP</li>
+									</ul>
+								</footer>
+							</article>
+						</section>
+
+						<section id="education" class="eleven columns alpha">
+							<h2>Education</h2>
+							<p>Memorial University of Newfoundland <span class="date">2008</span><br />
+							Master’s in Computational Linguistics - Finite-state Parsing of Cayuga Morphology</p>
+							<p>Memorial University of Newfoundland <span class="date">2005</span><br />
+							Bachelor's Degree in Linguistics, minor in German</p>
+						</section>
+
+						<section id="academic" class="eleven columns alpha">
+							<h2>Academic</h2>
+
+							<h3>Publications</h3>
+							<article><p>Graham, Dougal; Osment, Christopher, <span class="title">Interactive Web-Based Learning of Corpus-Generated Phrases</span> in Proceedings of AsiaCALL 2013, forthcoming</p></article>
+							<article><p>Graham, Dougal, <span class="title">The Engineering Phrases List: Towards Teachable ESP Phrases</span> in Proceedings of the 34<sup>th</sup> Annual ThaiTESOL International Conference, forthcoming</p></article>
+							<article><p>Graham, Dougal, <span class="title">An Investigation of Canadian Raising among Students in St. John’s</span> in <a href="http://www.mun.ca/linguistics/MLWPL/">Memorial University of Newfoundland Occasional Student Papers</a>, vol. 1, pp 8-18,  2008</p></article>
+							<article><p>Graham, Dougal.  <span class="title">Finite-state Parsing of Cayuga Morphology</span>. MA thesis, Memorial University, St. John’s, NL, 2008</p></article>
+							<article><p>Graham, Dougal.  <span class="title">A finite-state approach to morphological segmentation of Cayuga nominals</span>, in Proceedings of WSCLA XII: The Twelfth Workshop on the Structure and Constituency in the Languages of the Americas, UBCWPL 21, pp 60-71, March, 2008</p></article>
+
+							<h3>Conferences</h3>
+							<article><h4>The Engineering Phrases List: Towards Teachable ESP Phrases</h4>
+							<p>The 34th Annual Thailand Teaching English to Speakers of Other Languages International Conference (Thai TESOL 34), the Empress Hotel, Chiang Mai, March 30<sup>th</sup> – April 1<sup>st</sup>, 2013</p></article>
+							<article><h4>Interactive Web-Based Learning of Corpus-Generated Phrases</h4>
+							<p>The Asia Computer-Assisted Language Learning Conference (AsiaCALL 2013), University of Khon Kaen, Nov 21<sup>st</sup> – Nov 23<sup>rd</sup>, 2013</p></article>
+							<article><h4>Morphological Parsing of Cayuga in a Finite-state Framework</h4>
+							<p>The 12<sup>th</sup> Annual Workshop on the Structure and Constituency in the Languages of the Americas (WSCLA 12), University of Lethbridge, March 30<sup>th</sup> – April 1<sup>st</sup>, 2007</p></article>
+
+							<section id="awards">
+								<h3>Awards, Honors, &amp; Diplomas</h3>
+								<article>Fellow of the School of Graduate Studies, MUN <span class="date">2007</span></article>
+								<article>Graduate Research Integrity Program, MUN <span class="date">2007</span></article>
+								<article>Completed the Graduate Program in Teaching, MUN <span class="date">2006</span></article>
+								<article>Completed the Teaching Opportunities for Graduate Assistants Program, MUN <span class="date">2006</span></article>
+							</section>
+						</section>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div><!-- container -->
+	<!-- JS
+	================================================== -->
+	<script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/JavaScript" src="js/skills.js"></script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
