@@ -33,11 +33,20 @@ a:focus .icon--external-link .arrow {
   href="{{ href }}"
   {% if isExternal %}target="_blank" rel="noopener"{% endif %}
 >
-  {{ text }}
-  {% if isExternal %}
+	{% if ariaLabel %}
+		{% include ../components/offscreen-text.html, text: ariaLabel %}
+		<span aria-hidden="true">
+	{% endif %}
+
+	{{ text }}
+	{% if isExternal %}
 		{% include ../icons/external-link.html %}
-  {% endif %}
-  {% if isGitHub %}
+	{% endif %}
+	{% if isGitHub %}
 		{% include ../icons/github.html %}
-  {% endif %}
+	{% endif %}
+
+	{% if ariaLabel %}
+	</span>
+	{% endif %}
 </a>
