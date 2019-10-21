@@ -1,23 +1,14 @@
 {% if true != extLinkIsLoaded %}
 {%- assign extLinkIsLoaded = true -%}
 <style type="text/css">
-a .icon {
-  display: inline-flex;
-  height: 1em;
-  width: 1em;
-  align-self: baseline;
-  top: 0.125em;
-  position: relative;
-}
-
 a:hover .icon--external-link .arrow,
 a:focus .icon--external-link .arrow {
-  animation-name: wiggle;
+  animation-name: shoot;
   animation-duration: 1.6s;
   animation-iteration-count: infinite;
 }
 
-@keyframes wiggle {
+@keyframes shoot {
   0% {
 		transform: translate(0, 0);
 		opacity: 1
@@ -45,5 +36,8 @@ a:focus .icon--external-link .arrow {
   {{ text }}
   {% if isExternal %}
 		{% include ../icons/external-link.html %}
+  {% endif %}
+  {% if isGitHub %}
+		{% include ../icons/github.html %}
   {% endif %}
 </a>

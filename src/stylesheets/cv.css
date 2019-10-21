@@ -118,9 +118,12 @@ article .date:after {
 .horizontal-list ul li:after {
 	content: ', ';}
 .horizontal-list ul li:nth-last-child(2):after {
-	content: ', and ';}
+	content: ', ';}
 .horizontal-list ul li:nth-last-child(1):after {
 	content: '.';}
+.horizontal-list ul li:nth-last-child(1):before {
+	content: 'and ';
+}
 .work-details {
 	margin: 10px 0px; }
 

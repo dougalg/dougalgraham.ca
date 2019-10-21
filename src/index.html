@@ -9,8 +9,8 @@
 	================================================== -->
 	<meta charset="utf-8">
 	<title>Dougal Graham's CV</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="description" content="Dougal Graham's CV">
+	<meta name="author" content="Dougal Graham">
 
 	<!-- Mobile Specific Metas
 	================================================== -->
@@ -46,7 +46,9 @@
 							<dd>+66 (0) 98-282-3630</dd>
 							<dt>Email</dt>
 							<dd><a href="mailto:dougalg@gmail.com">dougalg@gmail.com</a></dd>
-							<dt><img class="github-mark" src="images/github/PNG/GitHub-Mark-32px.png" alt="The github octocat logo"></dt>
+							<dt>
+								{% include ./icons/github.html %}
+							</dt>
                             <dd>
 								{% include ./components/link.html, href: "https://www.github.com/dougalg", text: "dougalg ", isExternal: true %}
 							</dd>
@@ -112,7 +114,7 @@
 										<li>JavaScript</li>
 										<li>PHP</li>
 										<li>Java</li>
-										<li>Eslint</li>
+										<li>ESLint</li>
 										<li>GitHub Hooks</li>
 										<li>Jenkins</li>
 										<li>Istanbul</li>
@@ -171,11 +173,13 @@
 						<section id="projects" class="eleven columns alpha">
 							<h2>Projects</h2>
 							<article class="work">
-								<h3><a target="_blank" rel="noopener" href="https://github.com/dougalg/pan-handler">Pan Handler</a></h3>
+								<h3>
+									{% include ./components/link.html, href: "https://github.com/dougalg/pan-handler", text: "Pan Handler", isGitHub: true %}
+								</h3>
 								<p class="work-details">
 									An "as-simple-as-possible" pan and zoom library for canvas 2D.
-									Optional functionality is exposed through plugins. Published on NPM as
-									<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/@dougalg/pan-handler">@dougalg/pan-handler</a>.
+									Optional functionality is exposed through plugins. Available as
+									{% include ./components/link.html, href: "https://www.npmjs.com/package/@dougalg/pan-handler", text: "the NPM package @dougalg/pan-handler", isExternal: true %}
 								</p>
 								<footer class="tech horizontal-list">
 									<h3>Tech</h3>
@@ -186,9 +190,11 @@
 								</footer>
 							</article>
 							<article class="work">
-								<h3><a target="_blank" rel="noopener" href="https://github.com/dougalg/3D-Snake">3D Snake</a></h3>
+								<h3>
+									{% include ./components/link.html, href: "https://github.com/dougalg/3D-Snake", text: "3D Snake", isGitHub: true %}
+								</h3>
 								<p class="work-details">
-									An implementation of the classic Snake arcade game in a 3D space.
+									An implementation of the classic Snake arcade game in a 3D space. {% include ./components/link.html, href: "http://snake.tfiaa.com/", text: "Play 3D Snake.", isExternal: true %}
 								</p>
 								<footer class="tech horizontal-list">
 									<h3>Tech</h3>
@@ -199,7 +205,9 @@
 								</footer>
 							</article>
 							<article class="work">
-								<h3><a target="_blank" rel="noopener" href="http://crs2.kmutt.ac.th/ceem">CEEM</a></h3>
+								<h3>
+									{% include ./components/link.html, href: "http://crs2.kmutt.ac.th/ceem", text: "CEEM", isExternal: true %}
+								</h3>
 								<p class="work-details">
 									CEEM is a student
 									vocabulary learning tool based on applied linguistics research focusing on technical engineering
@@ -218,7 +226,9 @@
 								</footer>
 							</article>
 							<article class="work">
-								<h3><a target="_blank" rel="noopener" href="http://type-thai.net">Type-Thai</a></h3>
+								<h3>
+									{% include ./components/link.html, href: "http://type-thai.net", text: "Type-Thai", isExternal: true %}
+								</h3>
 								<p class="work-details">
 									An MacOS input method for Thai. A user can type romanized Thai, and te input method will
 									convert it to Thai characters. This was inspired by standard Japanese input methods which
@@ -233,10 +243,13 @@
 								</footer>
 							</article>
 							<article class="work">
-								<h3><a target="_blank" rel="noopener" href="http://crs2.kmutt.ac.th/Key-BNC/">Key-BNC</a></h3>
+								<h3>
+									{% include ./components/link.html, href: "https://github.com/dougalg/key-bnc", text: "Key-BNC", isGitHub: true %}
+								</h3>
 								<p class="work-details">
 									A tool to help applied linguistics researchers easily perform a variety of statistical
 									word frequency analyses against data from the British National Corpus (BNC).
+									{% include ./components/link.html, href: "http://crs2.kmutt.ac.th/Key-BNC/", text: "Visit the Key-BNC website.", isExternal: true %}
 								</p>
 								<footer class="tech horizontal-list">
 									<h3>Tech</h3>
