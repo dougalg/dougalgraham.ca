@@ -9,7 +9,9 @@
     "html-minifier": "4.0.0"
   },
   "scripts": {
+		"prebuild": "rm -rf ./dist",
     "build": "eleventy --input=./src --output=./dist --formats=html,js,scss,css",
+		"predev": "rm -rf ./_site",
 		"dev": "eleventy --input=./src --formats=html,js,scss,css --serve",
 		"deploy": "rsync -rzvh ./dist/* dgraham@dougalgraham.ca:/webroot/home/lighttpd/dougalgraham.ca/"
   },
