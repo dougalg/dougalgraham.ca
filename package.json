@@ -5,11 +5,13 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "^0.9.0"
+    "@11ty/eleventy": "^0.9.0",
+    "html-minifier": "4.0.0"
   },
   "scripts": {
     "build": "eleventy --input=./src --output=./dist --formats=html,js,scss,css",
-    "dev": "eleventy --input=./src --formats=html,js,scss,css --serve"
+		"dev": "eleventy --input=./src --formats=html,js,scss,css --serve",
+		"deploy": "rsync -rzvh ./dist/* dgraham@dougalgraham.ca:/webroot/home/lighttpd/dougalgraham.ca/"
   },
   "keywords": [],
   "author": "",

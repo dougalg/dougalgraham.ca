@@ -116,7 +116,7 @@ article .date:after {
 .horizontal-list h3:after {
 	content: ': ';}
 .horizontal-list ul li:after {
-	content: ',';}
+	content: ', ';}
 .horizontal-list ul li:nth-last-child(2):after {
 	content: ', and ';}
 .horizontal-list ul li:nth-last-child(1):after {
