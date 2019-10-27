@@ -1,82 +1,101 @@
-document.ready = function(){
-	// Set the easing speed for show/hide
-	showHideDuration = 500;
+const $ = (s, target=document) => target.querySelector(s);
+const $$ = (s, target=document) => Array.from(target.querySelectorAll(s));
 
-	// First we can create the section to hold the skills
-	// and insert it after the Experience and education section
-	$('#exp_and_ed').after('<section id="skillsSection" class="five columns omega"><h2>Skills</h2></section>');
-	// add in buttons to select all or none and the UL to hold the list
-	$selAll = $('<button class="linkLike">All</button>');
-	$selNone = $('<button class="linkLike">None</button>');
-	$skillsUL = $('<ul id="skillsUL"></ul>');
+const HIDDEN_WORK_CLASS = 'work--hidden';
 
-	$selAll.appendTo($('#skillsSection'));
-	$('#skillsSection').append(' | ');
-	$selNone.appendTo($('#skillsSection'));
-	$skillsUL.appendTo($('#skillsSection'));
+// Set the easing speed for show/hide
+showHideDuration = 500;
 
-	// Now, let's make a list of all the skills
-	var allSkills = [];
-	var allCheckboxes = [];
-	$('footer.skills ul li').each(function(){
-		// Only include each skill once
-		if (jQuery.inArray($(this).text(), allSkills) == -1) {
-			allSkills.push($(this).text());
-		}
-		// add a class hook to the article for ease of searching
-		hook = 'skillsClass_'+$(this).text().replace(/\W/g, '_');
-		$(this).parents('#exp_and_ed article.js-skills--hideable').addClass(hook);
-	});
+// Now, let's make a list of all the skills
+const allSkills = new Set();
+const addToSkills = allSkills.add.bind(allSkills);
+const allCheckboxes = [];
 
-	// Sort and add the checkboxes, lis, etc...
-	allSkills.sort();
-	$.each(allSkills, function(index, value) {
-		// Make a name with not spaces or other characters
-		// We'll use this as the unique checkbox name
-		$cleanText = 'skills_'+value.replace(/\W/g, '_');
-		$newLI = $('<li><input type="checkbox" id="'+$cleanText+'" value="'+value+'" /> <label for="'+$cleanText+'">'+value+'</label></li>');
-		$skillsUL.append($newLI);
-		allCheckboxes.push($newLI.find('input')[0]);
-	});
-	
-	// Attach the change event handler so they hide and show stuff when toggles
-	const workEls = document.querySelectorAll('#experience .js-skills--hideable');
+$$('#experience .work').forEach((workEl) => {
+	const skills = $$('footer.skills ul li', workEl)
+		.map((li) => li.textContent);
+
+	workEl.dataset.skills = skills;
+	skills.forEach(addToSkills);
 
 	requestAnimationFrame(() => {
-		workEls.forEach((el) => {
-			const height = el.offsetHeight;
-			el.style.height = `${height}px`;
-			el.dataset.height = height;
-		});
-	});
+		const height = workEl.offsetHeight;
 
-	const showAllWork = () => {
-		requestAnimationFrame(() => workEls.forEach(showEl));
-	};
+		workEl.dataset.height = height;
+		workEl.style.height = `${height}px`;
 
-	$selAll.click(function(){
-		$('#skillsUL li input[type=checkbox]').attr('checked', true);
-		showAllWork();
 	});
-	$selNone.click(function(){
-		$('#skillsUL li input[type=checkbox]').attr('checked', false);
-		showAllWork();
-	});
-	$('#skillsSection ul li input[type=checkbox]').change(function() {
-		const allSelected = allCheckboxes.filter(({ checked }) => checked);
+});
+
+// Sort and add the checkboxes, lis, etc...
+const listItemTpl = $('#skillListItem').content;
+const skillsUl = $('#skillsUL');
+const tempUl = document.importNode(skillsUl);
+const allListItems = Array.from(allSkills.values())
+	.sort()
+	.map((value) => renderSkillRow(listItemTpl, value));
+const changeHandler = getChangeHandler(allListItems);
+allListItems.forEach((el) => {
+	$('input', el).addEventListener('change', changeHandler);
+	tempUl.appendChild(el);
+});
+replaceNode(tempUl, skillsUl);
+requestAnimationFrame(() => {
+	$('#skillsSection').classList.remove('hidden');
+});
+
+function showEl(el) {
+	el.classList.remove(HIDDEN_WORK_CLASS);
+	el.style.height = `${el.dataset.height}px`;
+}
+
+function hideEl(el) {
+	el.classList.add(HIDDEN_WORK_CLASS);
+	el.style.height = 0;
+}
+
+function renderSkillRow(template, skill) {
+	const clone = document.importNode(template, true);
+	const id = `skill_${skill.replace(/\W/g, '_')}`;
+
+	const input = $('input', clone);
+	input.id = id;
+	input.value = skill;
+
+	const label = $('label', clone);
+	label.setAttribute('for', id);
+	label.textContent = skill;
+
+	return clone;
+}
+
+let workEls;
+function getWorkEls() {
+	if (!workEls) {
+		workEls = $$('#experience .work');
+	}
+	return workEls;
+}
+
+function getChangeHandler(allListItems) {
+	let allCheckboxes = null;
+	return function() {
+		if (allCheckboxes === null) {
+			allCheckboxes = $$('#skillsUL input');
+		}
+
+		const allSelected = allCheckboxes
+			.filter(({ checked }) => checked)
+			.map(({ value }) => value);
 
 		if (allSelected.length < 1) {
 			showAllWork();
 			return;
 		}
 
-		var selectedClasses = allSelected.map(function(checkbox) {
-			return 'skillsClass_' + checkbox.value.replace(/\W/g, '_');
-		});
-
 		requestAnimationFrame(() => {
-			workEls.forEach((el) => {
-				var isVisible = selectedClasses.some((currentClass) => el.classList.contains(currentClass));
+			getWorkEls().forEach((el) => {
+				var isVisible = allSelected.some((skill) => el.dataset.skills.split(',').includes(skill));
 				if (isVisible) {
 					showEl(el);
 				}
@@ -85,15 +104,17 @@ document.ready = function(){
 				}
 			});
 		});
-	});
-};
-
-function showEl(el) {
-	el.classList.remove('work--hidden');
-	el.style.height = `${el.dataset.height}px`;
+	}
 }
 
-function hideEl(el) {
-	el.classList.add('work--hidden');
-	el.style.height = 0;
+function replaceNode(newEl, oldEl) {
+	requestAnimationFrame(() => {
+		oldEl.parentNode.replaceChild(newEl, oldEl);
+	});
+}
+
+function showAllWork() {
+	getWorkEls().forEach((el) => {
+		showEl(el);
+	});
 }

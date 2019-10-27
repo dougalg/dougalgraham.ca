@@ -57,7 +57,7 @@
 						</dl>
 					</div>
 				</div>
-				<div class="row">
+				<main class="row">
 					<div id="exp_and_ed" class="eleven columns alpha">
 						<section id="experience">
 							<h2>Experience</h2>
@@ -311,14 +311,23 @@
 							</section>
 						</section>
 					</div>
-				</div>
+					<section id="skillsSection" class="five columns omega hidden">
+						<h2>Skills</h2>
+						<button class="linkLike">All</button> | <button class="linkLike">None</button>
+						<ul id="skillsUL"></ul>
+					</section>
+					<template id="skillListItem">
+						<li>
+							<!-- fill in id, for, value -->
+							<input type="checkbox" />
+							<label ></label>
+						</li>
+					</template>
+					<script type="text/JavaScript" src="js/skills.js"></script>
+				</main>
 			</article>
 		</div>
 	</div><!-- container -->
-	<!-- JS
-	================================================== -->
-	<script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script type="text/JavaScript" src="js/skills.js"></script>
 
 <!-- End Document
 ================================================== -->
