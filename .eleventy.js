@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
 				collapseWhitespace: true,
 				minifyCSS: true,
 				minifyJS: true,
+				conservativeCollapse: true,
 			});
 			return minified;
 		}
