@@ -51,11 +51,18 @@ button.linkLike {
 }
 a,
 a:visited,
-button.linkLike {
+.linkLike {
 	text-decoration: none;
 	border-bottom: 1px dotted #00e;
 }
-a:hover,.linkLike:hover,h3 a:visited:hover,#academic article span a:hover {
+a:hover,
+.linkLike:hover,
+h3 a:visited:hover,
+#academic article span a:hover,
+a:focus,
+.linkLike:focus,
+h3 a:visited:focus,
+#academic article span a:focus {
 	color: #00e;
 }
 h3 a,h3 a:visited {

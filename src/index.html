@@ -313,14 +313,34 @@
 					</div>
 					<section id="skillsSection" class="five columns omega hidden">
 						<h2>Skills</h2>
-						<button class="linkLike">All</button> | <button class="linkLike">None</button>
+						<button class="linkLike" id="resetSkills">Reset Selections</button>
 						<ul id="skillsUL"></ul>
 					</section>
+					<style type="text/css">
+						.skill-selector__checkbox:focus + .skill-label .squirkle,
+						.skill-label:hover .squirkle {
+							stroke-width: 5;
+						}
+						.skill-selector__checkbox {
+							opacity: 0;
+							width: 0;
+							height: 0;
+							margin: 0;
+						}
+						.skill-selector__checkbox:focus + .skill-label {
+							border-color: #00e;
+						}
+						.skill-selector__checkbox:focus + .skill-label .skill-selector__skill-name  {
+							color: #00e;
+						}
+					</style>
 					<template id="skillListItem">
-						<li>
+						<li class="skill-selector">
 							<!-- fill in id, for, value -->
-							<input type="checkbox" />
-							<label ></label>
+							<input type="checkbox" class="skill-selector__checkbox" />
+							<label class="skill-label">
+								{% include ./icons/plus-minus.html %} <span class="linkLike skill-selector__skill-name"></span></span>
+							</label>
 						</li>
 					</template>
 					<script type="text/JavaScript" src="js/skills.js"></script>

@@ -27,19 +27,23 @@ $$('#experience .work').forEach((workEl) => {
 	});
 });
 
+$('#resetSkills').addEventListener('click', showAllWork);
+
 // Sort and add the checkboxes, lis, etc...
 const listItemTpl = $('#skillListItem').content;
-const skillsUl = $('#skillsUL');
-const tempUl = document.importNode(skillsUl);
+const temporaryUl = $('#skillsUL');
+const skillsUl = document.importNode(temporaryUl);
 const allListItems = Array.from(allSkills.values())
 	.sort()
 	.map((value) => renderSkillRow(listItemTpl, value));
-const changeHandler = getChangeHandler(allListItems);
 allListItems.forEach((el) => {
-	$('input', el).addEventListener('change', changeHandler);
-	tempUl.appendChild(el);
+	const changeHandler = getChangeHandler(el);
+	const input = $('input', el);
+	input.addEventListener('change', changeHandler);
+	addToggler(input);
+	skillsUl.appendChild(el);
 });
-replaceNode(tempUl, skillsUl);
+replaceNode(skillsUl, temporaryUl);
 requestAnimationFrame(() => {
 	$('#skillsSection').classList.remove('hidden');
 });
@@ -64,7 +68,9 @@ function renderSkillRow(template, skill) {
 
 	const label = $('label', clone);
 	label.setAttribute('for', id);
-	label.textContent = skill;
+
+	const skillName = $('.skill-selector__skill-name', clone);
+	skillName.textContent = skill;
 
 	return clone;
 }
@@ -77,9 +83,43 @@ function getWorkEls() {
 	return workEls;
 }
 
-function getChangeHandler(allListItems) {
+function addToggler(el) {
+	el.toggle = function() {
+		if (!this.squirkle || !this.vert || !this.rotation) {
+			const parent = this.parentElement;
+			this.squirkle = $('.squirkle', parent);
+			this.vert = $('.vert', parent);
+			this.rotation = 0;
+		}
+
+		if (this.checked) {
+			if (this.rotation % 180) {
+				this.rotation += 180;
+			}
+			else {
+				this.rotation += 90;
+			}
+		}
+		else {
+			if ((this.rotation + 90) % 180) {
+				this.rotation += 180;
+			}
+			else {
+				this.rotation += 90;
+			}
+		}
+
+		requestAnimationFrame(() => {
+			this.vert.setAttribute('transform', `rotate(${el.rotation}, 45, 45)`);
+			this.squirkle.setAttribute('transform', `rotate(${el.rotation}, 45, 45)`);
+		});
+	};
+}
+
+function getChangeHandler(el) {
 	let allCheckboxes = null;
-	return function() {
+
+	return function(e) {
 		if (allCheckboxes === null) {
 			allCheckboxes = $$('#skillsUL input');
 		}
@@ -88,6 +128,7 @@ function getChangeHandler(allListItems) {
 			.filter(({ checked }) => checked)
 			.map(({ value }) => value);
 
+		e.currentTarget.toggle();
 		if (allSelected.length < 1) {
 			showAllWork();
 			return;
@@ -113,7 +154,15 @@ function replaceNode(newEl, oldEl) {
 	});
 }
 
+let allInputs;
 function showAllWork() {
+	allInputs = allInputs || $$('input', skillsUl);
+	allInputs.forEach((input) => {
+		if (input.checked) {
+			input.checked = false;
+			input.toggle();
+		}
+	});
 	getWorkEls().forEach((el) => {
 		showEl(el);
 	});
