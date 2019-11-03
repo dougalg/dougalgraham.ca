@@ -45,27 +45,33 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: normal;
 	margin: 0;
 }
-h1 { font-size: 4.6rem;
+h1 {
+	font-size: 4.6rem;
 	line-height: 5rem;
 	margin-bottom: 1rem;
 	margin-top: 0;
 }
-h2 { font-size: 3.5rem;
+h2 {
+	font-size: 3.5rem;
 	line-height: 40px;
 	margin-bottom: 10px;
 }
-h3 { font-size: 1.8rem;
+h3 {
+	font-size: 1.8rem;
 	line-height: 2.2rem;
 	margin-bottom: .2rem;
 }
-h4 { font-size: 1.6rem;
+h4 {
+	font-size: 1.6rem;
 	line-height: 1.9rem;
 	margin-bottom: 1.0rem;
 }
-h5 { font-size: 1.5rem;
+h5 {
+	font-size: 1.5rem;
 	line-height: 1.7rem;
 }
-h6 { font-size: 1.4rem;
+h6 {
+	font-size: 1.4rem;
 	line-height: 1.6rem;
 }
 
@@ -240,10 +246,12 @@ article .date:after {
 
 .work {
 	transition:
-		transform 0.4s,
-		height 0.4s,
-		margin 0.4s;
+		transform 0.6s ease-in-out,
+		height 0.6s ease-in-out,
+		margin 0.6s ease-in-out,
+		opacity 0.6s ease-in-out;
 	transform: rotate3d(1, 0, 0, 0deg);
+	opacity: 1;
 }
 
 .work * {
@@ -252,7 +260,8 @@ article .date:after {
 
 .work--hidden {
 	transform: rotate3d(1, 0, 0, 90deg)
-		translate3d(0, -100px, -10px);
+		translate3d(0, -150px, -10px);
+	opacity: 0;
 	height: 0;
 	margin: 0;
 	overflow: hidden;
@@ -302,10 +311,12 @@ article .date:after {
 	}
 
 	/* Put links after the text so people know they're there */
-	a:link:after,a:visited:after { content:" [" attr(href) "] ";
+	a:link:after,a:visited:after {
+		content:" [" attr(href) "] ";
 	}
 	/* Exclude links which aren't text */
-	#contact-info a:link:after,#contact-info a:visited:after { content: '';
+	#contact-info a:link:after,#contact-info a:visited:after {
+		content: '';
 	}
 
 	/* Set widths for the divs */
@@ -322,7 +333,8 @@ article .date:after {
 		margin: 0px;
 	}
 	/* Hide skills list on right and the link to download the PDF */
-	#skillsSection,.PDF-Link { display: none;
+	#skillsSection,.PDF-Link {
+		display: none;
 	}
 
 	/* Set skills list for each article and spacing */
@@ -351,7 +363,8 @@ article .date:after {
 	}
 
 	/* Fix top list for print */
-	dl { padding-right: 1cm;
+	dl {
+		padding-right: 1cm;
 		font-size: 0.9em;
 	}
 	dt {text-align: left;
@@ -362,7 +375,8 @@ article .date:after {
 	dd:after {
 		content: ' | ';
 	}
-	dt:after { content: '';
+	dt:after {
+		content: '';
 	}
 	dt {
 		float: right;
