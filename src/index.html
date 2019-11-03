@@ -18,10 +18,7 @@
 
 	<!-- CSS
 	================================================== -->
-	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
 	<link rel="stylesheet" href="stylesheets/cv.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -30,324 +27,373 @@
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<div class="container">
-		<div class="sixteen columns">
-			<article>
-				<div class="row">
-					<header class="ten columns alpha">
-						<hgroup>
-							<h1>Dougal Graham</h1>
-							<h2>Web Developer</h2>
-						</hgroup>
-					</header>
-					<div id="contact-info" class="six columns clearfix omega">
-						<dl>
-							<dt>Phone</dt>
-							<dd>+66 (0) 98-282-3630</dd>
-							<dt>Email</dt>
-							<dd><a href="mailto:dougalg@gmail.com">dougalg@gmail.com</a></dd>
-							<dt>
-								{% include ./icons/github.html %}
-							</dt>
-                            <dd>
-								{% include ./components/link.html, href: "https://www.github.com/dougalg", text: "dougalg ", ariaLabel: "My GitHub page." %}
-							</dd>
-							<dt class="PDF-Link">PDF</dt>
-							<dd class="PDF-Link"><a href="print_pdf.php">Download CV</a></dd>
-						</dl>
-					</div>
-				</div>
-				<main class="row">
-					<div id="exp_and_ed" class="eleven columns alpha">
-						<section id="experience">
-							<h2>Experience</h2>
-							<article class="work js-skills--hideable">
-								<hgroup>
-									<h3 class="title">Senior Developer (Remote)</h3>
-									<h3 class="employer">
-										{% include ./components/link.html, href: "https://viafoura.com/", text: "Viafoura", isExternal: true %}
-									</h3>
-								</hgroup>
-								<span class="date start">Sep. 2018</span>
-								<span class="date end">Present</span>
-								<p class="work-details">
-									Developed an integration test framework greatly reducing the frequency of live bugs.
-									Lead accessibility training, research, and ensured products met WCAG AA standards.
-									Worked with team members during shared hours to plan and develop features at a high level of quality.
-									Mentored and perform code reviews for teammates.
-								</p>
-								<footer class="skills horizontal-list">
-									<h3>Key Skills</h3>
-									<ul>
-                                        <li>Mentoring</li>
-                                        <li>Accessibility</li>
-										<li>JavaScript</li>
-										<li>PHP</li>
-										<li>Java</li>
-										<li>CSS</li>
-										<li>HTML</li>
-										<li>Vue</li>
-									</ul>
-								</footer>
-							</article>
-							<article class="work js-skills--hideable">
-								<hgroup>
-									<h3 class="title">Front-end Team Lead</h3>
-									<h3 class="employer">
-										{% include ./components/link.html, href: "https://viafoura.com/", text: "Viafoura", isExternal: true %}
-									</h3>
-								</hgroup>
-								<span class="date start">Jul. 2015</span>
-								<span class="date end">Sep. 2018</span>
-								<p class="work-details">
-									Lead weekly planning scrums.
-									Develop plans to ensure new features are developed effeciantly and with high quality.
-									Develop and maintain processes (eg CI) to ensure code quality and reliablity using tools to automate linting, testing, and code coverage requirements.
-									Mentor and and work with team members to develop style guides, and maintain code efficiency.
-									Participate in candidate interviews.
-								</p>
-								<footer class="skills horizontal-list">
-									<h3>Key Skills</h3>
-									<ul>
-                                        <li>Mentoring</li>
-                                        <li>Continuous integration</li>
-										<li>JavaScript</li>
-										<li>PHP</li>
-										<li>Java</li>
-										<li>ESLint</li>
-										<li>GitHub Hooks</li>
-										<li>Jenkins</li>
-										<li>Istanbul</li>
-										<li>Webpack</li>
-										<li>CSS</li>
-										<li>HTML</li>
-										<li>Vue</li>
-									</ul>
-								</footer>
-							</article>
-							<article class="work js-skills--hideable">
-								<hgroup>
-									<h3 class="title">Product Team Developer</h3>
-									<h3 class="employer">
-										{% include ./components/link.html, href: "https://viafoura.com/", text: "Viafoura", isExternal: true %}
-									</h3>
-								</hgroup>
-								<span class="date start">Sep. 2014</span>
-								<span class="date end">Jul. 2015</span>
-								<p class="work-details">Work in a team to develop and maintain key client-facing software. Quickly respond to and resolve bug reports, by isolating and fixing issues in the software, or liasing with relevant team members to ensure bug resolution. Implement new features, write tests, and ensure product stability and validity. Develop features in tandem with other team members.</p>
-								<footer class="skills horizontal-list">
-									<h3>Key Skills</h3>
-									<ul>
-										<li>JavaScript</li>
-										<li>PHP</li>
-										<li>Java</li>
-										<li>Backbone</li>
-										<li>Marionette</li>
-										<li>Git</li>
-										<li>CSS</li>
-										<li>HTML</li>
-										<li>Vue</li>
-									</ul>
-								</footer>
-							</article>
-							<article class="work js-skills--hideable">
-								<hgroup>
-									<h3 class="title">Lecturer and Researcher</h3>
-									<h3 class="employer">King Mongkut's University of Technology Thonburi</h3>
-								</hgroup>
-								<span class="date start">Oct. 2012</span>
-								<span class="date end">Aug. 2014</span>
-								<p class="work-details">Conducted corpus research to develop a useful understanding of context-specific language use. Developed an online learning platform for engineering students learning English. Helped design questions for the Test of English for Thai Engineers and Technologists (TETET).</p>
-								<footer class="skills horizontal-list">
-									<h3>Key Skills</h3>
-									<ul>
-										<li>Python</li>
-										<li>CSS</li>
-										<li>HTML</li>
-										<li>JavaScript</li>
-									</ul>
-								</footer>
-							</article>
-						</section>
-
-						<section id="projects" class="eleven columns alpha">
-							<h2>Projects</h2>
-							<article class="work">
-								<h3>
-									{% include ./components/link.html, href: "https://github.com/dougalg/pan-handler", text: "Pan Handler", isGitHub: true %}
-								</h3>
-								<p class="work-details">
-									An "as-simple-as-possible" pan and zoom library for canvas 2D.
-									Optional functionality is exposed through plugins. Available as
-									{% include ./components/link.html, href: "https://www.npmjs.com/package/@dougalg/pan-handler", text: "the NPM package @dougalg/pan-handler", isExternal: true %}
-								</p>
-								<footer class="tech horizontal-list">
-									<h3>Tech</h3>
-									<ul>
-										<li>TypeScript</li>
-										<li>NPM</li>
-									</ul>
-								</footer>
-							</article>
-							<article class="work">
-								<h3>
-									{% include ./components/link.html, href: "https://github.com/dougalg/3D-Snake", text: "3D Snake", isGitHub: true %}
-								</h3>
-								<p class="work-details">
-									An implementation of the classic Snake arcade game in a 3D space. {% include ./components/link.html, href: "http://snake.tfiaa.com/", text: "Play 3D Snake.", isExternal: true %}
-								</p>
-								<footer class="tech horizontal-list">
-									<h3>Tech</h3>
-									<ul>
-										<li>JavaScript</li>
-										<li>ThreeJS</li>
-									</ul>
-								</footer>
-							</article>
-							<article class="work">
-								<h3>
-									{% include ./components/link.html, href: "http://crs2.kmutt.ac.th/ceem", text: "CEEM", isExternal: true %}
-								</h3>
-								<p class="work-details">
-									CEEM is a student
-									vocabulary learning tool based on applied linguistics research focusing on technical engineering
-									vocabulary. Includes an api written in Python as well as an interactive frontend written in JavaScript.
-								</p>
-								<footer class="tech horizontal-list">
-									<h3>Tech</h3>
-									<ul>
-										<li>JavaScript</li>
-										<li>CSS</li>
-										<li>HTML</li>
-										<li>Python 3</li>
-										<li>MySQL</li>
-										<li>OpenID</li>
-									</ul>
-								</footer>
-							</article>
-							<article class="work">
-								<h3>
-									{% include ./components/link.html, href: "http://type-thai.net", text: "Type-Thai", isExternal: true %}
-								</h3>
-								<p class="work-details">
-									An MacOS input method for Thai. A user can type romanized Thai, and te input method will
-									convert it to Thai characters. This was inspired by standard Japanese input methods which
-									use romanization. This project is no longer maintained.
-								</p>
-								<footer class="tech horizontal-list">
-									<h3>Tech</h3>
-									<ul>
-										<li>XFST (Finite-state transducers)</li>
-										<li>Objective-C</li>
-									</ul>
-								</footer>
-							</article>
-							<article class="work">
-								<h3>
-									{% include ./components/link.html, href: "https://github.com/dougalg/key-bnc", text: "Key-BNC", isGitHub: true %}
-								</h3>
-								<p class="work-details">
-									A tool to help applied linguistics researchers easily perform a variety of statistical
-									word frequency analyses against data from the British National Corpus (BNC).
-									{% include ./components/link.html, href: "http://crs2.kmutt.ac.th/Key-BNC/", text: "Visit the Key-BNC website.", isExternal: true %}
-								</p>
-								<footer class="tech horizontal-list">
-									<h3>Tech</h3>
-									<ul>
-										<li>Python 3</li>
-									</ul>
-								</footer>
-							</article>
-							<article class="work">
-								<h3>The Lesson Repository</h3>
-								<p class="work-details">
-									A tool for English teachers in Japan to share lesson plans and lesson materials. Developed a theme using
-									Wordpress with file upload, and login functionality.
-								</p>
-								<footer class="tech horizontal-list">
-									<h3>Tech</h3>
-									<ul>
-										<li>Wordpress</li>
-										<li>HTML</li>
-										<li>CSS</li>
-										<li>PHP</li>
-									</ul>
-								</footer>
-							</article>
-						</section>
-
-						<section id="education" class="eleven columns alpha">
-							<h2>Education</h2>
-							<p>Memorial University of Newfoundland <span class="date">2008</span><br />
-							Master’s in Computational Linguistics - Finite-state Parsing of Cayuga Morphology</p>
-							<p>Memorial University of Newfoundland <span class="date">2005</span><br />
-							Bachelor's Degree in Linguistics, minor in German</p>
-						</section>
-
-						<section id="academic" class="eleven columns alpha">
-							<h2>Academic</h2>
-
-							<h3>Publications</h3>
-							<article><p>Graham, Dougal; Osment, Christopher, <span class="title">Interactive Web-Based Learning of Corpus-Generated Phrases</span> in Proceedings of AsiaCALL 2013, forthcoming</p></article>
-							<article><p>Graham, Dougal, <span class="title">The Engineering Phrases List: Towards Teachable ESP Phrases</span> in Proceedings of the 34<sup>th</sup> Annual ThaiTESOL International Conference, forthcoming</p></article>
-							<article><p>Graham, Dougal, <span class="title">An Investigation of Canadian Raising among Students in St. John’s</span> in <a href="http://www.mun.ca/linguistics/MLWPL/">Memorial University of Newfoundland Occasional Student Papers</a>, vol. 1, pp 8-18,  2008</p></article>
-							<article><p>Graham, Dougal.  <span class="title">Finite-state Parsing of Cayuga Morphology</span>. MA thesis, Memorial University, St. John’s, NL, 2008</p></article>
-							<article><p>Graham, Dougal.  <span class="title">A finite-state approach to morphological segmentation of Cayuga nominals</span>, in Proceedings of WSCLA XII: The Twelfth Workshop on the Structure and Constituency in the Languages of the Americas, UBCWPL 21, pp 60-71, March, 2008</p></article>
-
-							<h3>Conferences</h3>
-							<article><h4>The Engineering Phrases List: Towards Teachable ESP Phrases</h4>
-							<p>The 34th Annual Thailand Teaching English to Speakers of Other Languages International Conference (Thai TESOL 34), the Empress Hotel, Chiang Mai, March 30<sup>th</sup> – April 1<sup>st</sup>, 2013</p></article>
-							<article><h4>Interactive Web-Based Learning of Corpus-Generated Phrases</h4>
-							<p>The Asia Computer-Assisted Language Learning Conference (AsiaCALL 2013), University of Khon Kaen, Nov 21<sup>st</sup> – Nov 23<sup>rd</sup>, 2013</p></article>
-							<article><h4>Morphological Parsing of Cayuga in a Finite-state Framework</h4>
-							<p>The 12<sup>th</sup> Annual Workshop on the Structure and Constituency in the Languages of the Americas (WSCLA 12), University of Lethbridge, March 30<sup>th</sup> – April 1<sup>st</sup>, 2007</p></article>
-
-							<section id="awards">
-								<h3>Awards, Honors, &amp; Diplomas</h3>
-								<article>Fellow of the School of Graduate Studies, MUN <span class="date">2007</span></article>
-								<article>Graduate Research Integrity Program, MUN <span class="date">2007</span></article>
-								<article>Completed the Graduate Program in Teaching, MUN <span class="date">2006</span></article>
-								<article>Completed the Teaching Opportunities for Graduate Assistants Program, MUN <span class="date">2006</span></article>
-							</section>
-						</section>
-					</div>
-					<section id="skillsSection" class="five columns omega hidden">
-						<h2>Skills</h2>
-						<button class="linkLike" id="resetSkills">Reset Selections</button>
-						<ul id="skillsUL"></ul>
-					</section>
-					<style type="text/css">
-						.skill-selector__checkbox:focus + .skill-label .squirkle,
-						.skill-label:hover .squirkle {
-							stroke-width: 5;
-						}
-						.skill-selector__checkbox {
-							opacity: 0;
-							width: 0;
-							height: 0;
-							margin: 0;
-						}
-						.skill-selector__checkbox:focus + .skill-label {
-							border-color: #00e;
-						}
-						.skill-selector__checkbox:focus + .skill-label .skill-selector__skill-name  {
-							color: #00e;
-						}
-					</style>
-					<template id="skillListItem">
-						<li class="skill-selector">
-							<!-- fill in id, for, value -->
-							<input type="checkbox" class="skill-selector__checkbox" />
-							<label class="skill-label">
-								{% include ./icons/plus-minus.html %} <span class="linkLike skill-selector__skill-name"></span></span>
-							</label>
-						</li>
-					</template>
-					<script type="text/JavaScript" src="js/skills.js"></script>
-				</main>
-			</article>
+	<style type="text/css">
+	.page-layout {
+		grid-template-columns: 1fr;
+		max-width: 90rem;
+		display: grid;
+		grid-column-gap: 2rem;
+		grid-row-gap: 1.5rem;
+		margin-left: 3rem;
+		margin-right: 3rem;
+	}
+	@media screen and (min-width: 640px) {
+		.page-layout {
+			grid-template-columns: 1fr auto;
+		}
+	}
+	</style>
+	<div class="page-layout">
+		<header>
+			<hgroup>
+				<h1>Dougal Graham</h1>
+				<h2>Web Developer</h2>
+			</hgroup>
+		</header>
+		<div id="contact-info">
+			<dl>
+				<dt>Phone</dt>
+				<dd>+66 (0) 98-282-3630</dd>
+				<dt>Email</dt>
+				<dd>
+					{% include ./components/link.html, href: "mailto:dougalg@gmail.com", text: "dougalg@gmail.com", ariaLabel: "Send me an email" %}
+				</dd>
+				<dt>
+					{% include ./icons/github.html %}
+				</dt>
+				<dd>
+					{% include ./components/link.html, href: "https://www.github.com/dougalg", text: "dougalg ", ariaLabel: "My GitHub page." %}
+				</dd>
+				<dt class="PDF-Link">PDF</dt>
+				<dd class="PDF-Link">
+					{% include ./components/link.html, href: "print_pdf.php", text: "Download CV" %}
+				</dd>
+			</dl>
 		</div>
-	</div><!-- container -->
+
+		<div id="exp_and_ed" class="eleven columns alpha">
+			<section id="experience">
+				<h2>Experience</h2>
+				<article class="work js-skills--hideable">
+					<hgroup class="work__header">
+						<h3 class="title">Senior Developer (Remote)</h3>
+						<h3 class="employer">
+							{% include ./components/link.html, href: "https://viafoura.com/", text: "Viafoura", isExternal: true %}
+						</h3>
+					</hgroup>
+					<span class="date start">Sep. 2018</span>
+					<span class="date end">Present</span>
+					<p class="work-details">
+						Developed an integration test framework which greatly reduced the frequency of live bugs.
+						Lead accessibility training, research, and ensured products met WCAG AA standards.
+						Worked with team members during shared hours to plan and develop features at a high level of quality.
+						Mentored and performed code reviews for teammates.
+					</p>
+					<footer class="skills horizontal-list">
+						<h3>Key Skills</h3>
+						<ul>
+							<li>Mentoring</li>
+							<li>Accessibility</li>
+							<li>JavaScript</li>
+							<li>PHP</li>
+							<li>Java</li>
+							<li>CSS</li>
+							<li>HTML</li>
+							<li>Vue</li>
+						</ul>
+					</footer>
+				</article>
+				<article class="work js-skills--hideable">
+					<hgroup class="work__header">
+						<h3 class="title">Front-end Team Lead</h3>
+						<h3 class="employer">
+							{% include ./components/link.html, href: "https://viafoura.com/", text: "Viafoura", isExternal: true %}
+						</h3>
+					</hgroup>
+					<span class="date start">Jul. 2015</span>
+					<span class="date end">Sep. 2018</span>
+					<p class="work-details">
+						Lead weekly planning scrums.
+						Developed plans to ensure new features are developed efficiantly and with high quality.
+						Developed and maintained processes (eg CI) to ensure code quality and reliablity using tools to automate linting, testing, and code coverage requirements.
+						Mentored and worked with team members to develop style guides, and maintain code efficiency.
+						Participated in candidate interviews.
+					</p>
+					<footer class="skills horizontal-list">
+						<h3>Key Skills</h3>
+						<ul>
+							<li>Mentoring</li>
+							<li>Continuous integration</li>
+							<li>JavaScript</li>
+							<li>PHP</li>
+							<li>Java</li>
+							<li>ESLint</li>
+							<li>GitHub Hooks</li>
+							<li>Jenkins</li>
+							<li>Istanbul</li>
+							<li>Webpack</li>
+							<li>CSS</li>
+							<li>HTML</li>
+							<li>Vue</li>
+						</ul>
+					</footer>
+				</article>
+				<article class="work js-skills--hideable">
+					<hgroup class="work__header">
+						<h3 class="title">Product Team Developer</h3>
+						<h3 class="employer">
+							{% include ./components/link.html, href: "https://viafoura.com/", text: "Viafoura", isExternal: true %}
+						</h3>
+					</hgroup>
+					<span class="date start">Sep. 2014</span>
+					<span class="date end">Jul. 2015</span>
+					<p class="work-details">Work in a team to develop and maintain key client-facing software. Quickly respond to and resolve bug reports, by isolating and fixing issues in the software, or liasing with relevant team members to ensure bug resolution. Implement new features, write tests, and ensure product stability and validity. Develop features in tandem with other team members.</p>
+					<footer class="skills horizontal-list">
+						<h3>Key Skills</h3>
+						<ul>
+							<li>JavaScript</li>
+							<li>PHP</li>
+							<li>Java</li>
+							<li>Backbone</li>
+							<li>Marionette</li>
+							<li>Git</li>
+							<li>CSS</li>
+							<li>HTML</li>
+							<li>Vue</li>
+						</ul>
+					</footer>
+				</article>
+				<article class="work js-skills--hideable">
+					<hgroup class="work__header">
+						<h3 class="title">Lecturer and Researcher</h3>
+						<h3 class="employer">King Mongkut's University of Technology Thonburi</h3>
+					</hgroup>
+					<span class="date start">Oct. 2012</span>
+					<span class="date end">Aug. 2014</span>
+					<p class="work-details">Conducted corpus research to develop a useful understanding of context-specific language use. Developed an online learning platform for engineering students learning English. Helped design questions for the Test of English for Thai Engineers and Technologists (TETET).</p>
+					<footer class="skills horizontal-list">
+						<h3>Key Skills</h3>
+						<ul>
+							<li>Python</li>
+							<li>CSS</li>
+							<li>HTML</li>
+							<li>JavaScript</li>
+						</ul>
+					</footer>
+				</article>
+			</section>
+
+			<section id="projects" class="eleven columns alpha">
+				<h2>Projects</h2>
+				<article class="work">
+					<h3>
+						{% include ./components/link.html, href: "https://github.com/dougalg/pan-handler", text: "Pan Handler", isGitHub: true %}
+					</h3>
+					<p class="work-details">
+						An "as-simple-as-possible" pan and zoom library for canvas 2D.
+						Optional functionality is exposed through plugins. Available as
+						{% include ./components/link.html, href: "https://www.npmjs.com/package/@dougalg/pan-handler", text: "the NPM package @dougalg/pan-handler", isExternal: true %}
+					</p>
+					<footer class="tech horizontal-list">
+						<h3>Tech</h3>
+						<ul>
+							<li>TypeScript</li>
+							<li>NPM</li>
+						</ul>
+					</footer>
+				</article>
+				<article class="work">
+					<h3>
+						{% include ./components/link.html, href: "https://github.com/dougalg/3D-Snake", text: "3D Snake", isGitHub: true %}
+					</h3>
+					<p class="work-details">
+						An implementation of the classic Snake arcade game in a 3D space. {% include ./components/link.html, href: "http://snake.tfiaa.com/", text: "Play 3D Snake.", isExternal: true %}
+					</p>
+					<footer class="tech horizontal-list">
+						<h3>Tech</h3>
+						<ul>
+							<li>JavaScript</li>
+							<li>ThreeJS</li>
+						</ul>
+					</footer>
+				</article>
+				<article class="work">
+					<h3>
+						{% include ./components/link.html, href: "http://crs2.kmutt.ac.th/ceem", text: "CEEM", isExternal: true %}
+					</h3>
+					<p class="work-details">
+						CEEM is a student
+						vocabulary learning tool based on applied linguistics research focusing on technical engineering
+						vocabulary. Includes an api written in Python as well as an interactive frontend written in JavaScript.
+					</p>
+					<footer class="tech horizontal-list">
+						<h3>Tech</h3>
+						<ul>
+							<li>JavaScript</li>
+							<li>CSS</li>
+							<li>HTML</li>
+							<li>Python 3</li>
+							<li>MySQL</li>
+							<li>OpenID</li>
+						</ul>
+					</footer>
+				</article>
+				<article class="work">
+					<h3>
+						{% include ./components/link.html, href: "http://type-thai.net", text: "Type-Thai", isExternal: true %}
+					</h3>
+					<p class="work-details">
+						An MacOS input method for Thai. A user can type romanized Thai, and te input method will
+						convert it to Thai characters. This was inspired by standard Japanese input methods which
+						use romanization. This project is no longer maintained.
+					</p>
+					<footer class="tech horizontal-list">
+						<h3>Tech</h3>
+						<ul>
+							<li>XFST (Finite-state transducers)</li>
+							<li>Objective-C</li>
+						</ul>
+					</footer>
+				</article>
+				<article class="work">
+					<h3>
+						{% include ./components/link.html, href: "https://github.com/dougalg/key-bnc", text: "Key-BNC", isGitHub: true %}
+					</h3>
+					<p class="work-details">
+						A tool to help applied linguistics researchers easily perform a variety of statistical
+						word frequency analyses against data from the British National Corpus (BNC).
+						{% include ./components/link.html, href: "http://crs2.kmutt.ac.th/Key-BNC/", text: "Visit the Key-BNC website.", isExternal: true %}
+					</p>
+					<footer class="tech horizontal-list">
+						<h3>Tech</h3>
+						<ul>
+							<li>Python 3</li>
+						</ul>
+					</footer>
+				</article>
+				<article class="work">
+					<h3>The Lesson Repository</h3>
+					<p class="work-details">
+						A tool for English teachers in Japan to share lesson plans and lesson materials. Developed a theme using
+						Wordpress with file upload, and login functionality.
+					</p>
+					<footer class="tech horizontal-list">
+						<h3>Tech</h3>
+						<ul>
+							<li>Wordpress</li>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>PHP</li>
+						</ul>
+					</footer>
+				</article>
+			</section>
+
+			<section id="education" class="eleven columns alpha">
+				<h2>Education</h2>
+				<p>Memorial University of Newfoundland <span class="date">2008</span><br />
+				Master’s in Computational Linguistics - Finite-state Parsing of Cayuga Morphology</p>
+				<p>Memorial University of Newfoundland <span class="date">2005</span><br />
+				Bachelor's Degree in Linguistics, minor in German</p>
+			</section>
+
+			<section id="academic" class="eleven columns alpha">
+				<h2>Academic</h2>
+
+				<h3>Publications</h3>
+				<article><p>Graham, Dougal; Osment, Christopher, <span class="title">Interactive Web-Based Learning of Corpus-Generated Phrases</span> in Proceedings of AsiaCALL 2013, forthcoming</p></article>
+				<article><p>Graham, Dougal, <span class="title">The Engineering Phrases List: Towards Teachable ESP Phrases</span> in Proceedings of the 34<sup>th</sup> Annual ThaiTESOL International Conference, forthcoming</p></article>
+				<article><p>Graham, Dougal, <span class="title">An Investigation of Canadian Raising among Students in St. John’s</span> in
+					{% include ./components/link.html, href: "http://www.mun.ca/linguistics/MLWPL/", text: "Memorial University of Newfoundland Occasional Student Papers", isExternal: true %}, vol. 1, pp 8-18,  2008</p></article>
+				<article><p>Graham, Dougal.  <span class="title">Finite-state Parsing of Cayuga Morphology</span>. MA thesis, Memorial University, St. John’s, NL, 2008</p></article>
+				<article><p>Graham, Dougal.  <span class="title">A finite-state approach to morphological segmentation of Cayuga nominals</span>, in Proceedings of WSCLA XII: The Twelfth Workshop on the Structure and Constituency in the Languages of the Americas, UBCWPL 21, pp 60-71, March, 2008</p></article>
+
+				<h3>Conferences</h3>
+				<article><h4>The Engineering Phrases List: Towards Teachable ESP Phrases</h4>
+				<p>The 34th Annual Thailand Teaching English to Speakers of Other Languages International Conference (Thai TESOL 34), the Empress Hotel, Chiang Mai, March 30<sup>th</sup> – April 1<sup>st</sup>, 2013</p></article>
+				<article><h4>Interactive Web-Based Learning of Corpus-Generated Phrases</h4>
+				<p>The Asia Computer-Assisted Language Learning Conference (AsiaCALL 2013), University of Khon Kaen, Nov 21<sup>st</sup> – Nov 23<sup>rd</sup>, 2013</p></article>
+				<article><h4>Morphological Parsing of Cayuga in a Finite-state Framework</h4>
+				<p>The 12<sup>th</sup> Annual Workshop on the Structure and Constituency in the Languages of the Americas (WSCLA 12), University of Lethbridge, March 30<sup>th</sup> – April 1<sup>st</sup>, 2007</p></article>
+
+				<section id="awards">
+					<h3>Awards, Honors, &amp; Diplomas</h3>
+					<article>Fellow of the School of Graduate Studies, MUN <span class="date">2007</span></article>
+					<article>Graduate Research Integrity Program, MUN <span class="date">2007</span></article>
+					<article>Completed the Graduate Program in Teaching, MUN <span class="date">2006</span></article>
+					<article>Completed the Teaching Opportunities for Graduate Assistants Program, MUN <span class="date">2006</span></article>
+				</section>
+			</section>
+		</div>
+		<style type="text/css">
+			.skills-section {
+				display: none;
+			}
+			@media screen and (min-width: 640px) {
+				.skills-section {
+					display: block;
+				}
+			}
+			.skills-section__reset {
+				background-color: #e2fbff;
+				padding: 0.2rem 0.6rem;
+				border-radius: 3px;
+				border: 2px solid #e2fbff;
+			}
+			.skills-section__reset:hover,
+			.skills-section__reset:focus {
+				border-color: #2E99B8;
+			}
+		</style>
+		<section id="skillsSection" class="skills-section">
+			<h2>Skills</h2>
+			<button class="skills-section__reset no-outline" id="resetSkills">Reset Selections</button>
+			<ul id="skillsUL"></ul>
+		</section>
+		<style type="text/css">
+			.skill-selector__checkbox:focus + .skill-label .squirkle,
+			.skill-label:hover .squirkle {
+				stroke-width: 5;
+			}
+			.skill-selector {
+				margin-bottom: 0.8rem;
+			}
+			.skill-selector__checkbox {
+				position: absolute;
+				opacity: 0;
+				width: 0;
+				height: 0;
+				margin: 0;
+			}
+			.skill-selector__checkbox:focus + .skill-label {
+				border-color: #00e;
+			}
+			.skill-selector__checkbox:focus + .skill-label .skill-selector__skill-name  {
+				color: #00e;
+			}
+			.skill-label {
+				padding: .15rem .5rem .15rem .3rem;
+				border-radius: 3px;
+			}
+			.skill-selector__checkbox:checked + .skill-label {
+				background-color: #e2fbff;
+			}
+			.skill-selector__checkbox:checked + .skill-label .linkLike {
+				font-weight: bold;
+				border-bottom-color: transparent;
+			}
+		</style>
+		<template id="skillListItem">
+			<li class="skill-selector">
+				<!-- fill in id, for, value -->
+				<input type="checkbox" class="skill-selector__checkbox" />
+				<label class="skill-label">
+					{% include ./icons/plus-minus.html %} <span class="linkLike skill-selector__skill-name"></span></span>
+				</label>
+			</li>
+		</template>
+		<script type="text/JavaScript" src="js/skills.js"></script>
+	</main>
 
 <!-- End Document
 ================================================== -->

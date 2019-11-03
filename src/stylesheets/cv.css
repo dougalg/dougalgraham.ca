@@ -1,46 +1,102 @@
 /* Breadcrumbs
   *
-  * 0. Headings
-  * 1. Links
-  * 2. Contact Info
-  * 3. Dates
-  * 4. Skills
-  * 5. Academic
-  * 6. Work animation
-  * 7. Print
+  * 0. Base styles
+  * 1. Headings
+  * 2. Links
+  * 3. Contact Info
+  * 4. Dates
+  * 5. Skills
+  * 6. Academic
+  * 7. Work animation
+  * 8. Print
   *
   */
 
- /* 0. Headings */
+/* Base styles */
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.4rem;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	color: #444;
+}
+ul {
+	padding: 0;
+}
+ul li {
+	list-style-type: none;
+}
+
+.no-outline {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+
+}
+.no-outline::-moz-focus-inner {
+	border: 0;
+}
+
+/* Headings */
 h1,h2,h3,h4,h5,h6 {
 	color: #181818;
 	font-family: "Georgia","Times New Roman",Helvetica,Arial,sans-serif;
 	font-weight: normal;
+	margin: 0;
 }
-h1 { font-size: 46px; line-height: 50px; margin-bottom: 10px;}
-h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
-h3 { font-size: 18px; line-height: 22px; margin-bottom: 2px; }
-h4 { font-size: 16px; line-height: 19px; margin-bottom: 10px; }
-h5 { font-size: 15px; line-height: 17px; }
-h6 { font-size: 14px; line-height: 16px; }
+h1 { font-size: 4.6rem;
+	line-height: 5rem;
+	margin-bottom: 1rem;
+	margin-top: 0;
+}
+h2 { font-size: 3.5rem;
+	line-height: 40px;
+	margin-bottom: 10px;
+}
+h3 { font-size: 1.8rem;
+	line-height: 2.2rem;
+	margin-bottom: .2rem;
+}
+h4 { font-size: 1.6rem;
+	line-height: 1.9rem;
+	margin-bottom: 1.0rem;
+}
+h5 { font-size: 1.5rem;
+	line-height: 1.7rem;
+}
+h6 { font-size: 1.4rem;
+	line-height: 1.6rem;
+}
 
-.work h3:nth-child(2),h2:nth-child(2),.horizontal-list h3,dl dt,#academic article span.title,#academic article span a,#academic article span a.visited {
-	color: #2E99B8;}
+.work h3:nth-child(2),
+h2:nth-child(2),
+.horizontal-list h3,
+dl dt,
+#academic article span.title,
+#academic article span a,
+#academic article span a.visited {
+	color: #2E99B8;
+}
 
 header h2 {
-	font-size: 23px; line-height: 25px;}
-
-article.work hgroup {
-	float: left; }
+	font-size: 2.3rem;
+	line-height: 2.5rem;
+}
 
 article.work p {
-	clear: both; }
+	clear: both;
+}
 
 .work {
-	margin-bottom: 20px; }
+	margin-bottom: 2.5rem;
+}
+.work__header {
+	margin-bottom: 1rem;
+}
 
-/* 1. Links */
-button.linkLike {
+/* Links */
+button {
 	margin: 0;
 	padding: 0;
 	background: none;
@@ -52,6 +108,7 @@ button.linkLike {
 a,
 a:visited,
 .linkLike {
+	color: #444;
 	text-decoration: none;
 	border-bottom: 1px dotted #00e;
 }
@@ -64,30 +121,26 @@ a:focus,
 h3 a:visited:focus,
 #academic article span a:focus {
 	color: #00e;
+	border-bottom-style: solid;
 }
 h3 a,h3 a:visited {
 	color: #2E99B8;
 }
 
-/* 2. Contact Info */
+/* Contact Info */
 dl {
-	margin-top: 10px;
-	width: 100%;
-	 overflow:hidden;
+	margin-top: 1rem;
+	display: grid;
+    grid-template-columns: auto auto;
 }
 dt {
-	float: left;
 	text-align: right;
-	width: 16%;
-	margin-right: 1%;
-	clear:left;
 }
 dt:after {
 	content: ': ';
 }
 dd {
-	width: 83%;
-	margin-left: 17%;
+	margin-left: 0.5rem;
 }
 
 .github-mark {
@@ -97,42 +150,62 @@ dd {
 	margin-right: 0.2rem;
 }
 
-/* 3. Dates */
-.date {
-	float: right; }
-.date.start:before {
-	content: 'From: '; }
-.date.end:before {
-	content: 'To: '; }
-.date.end:after,.date.start:after {content: '';}
-.date.end {
-	clear: right; }
-.date:before,.date:after {
-	color: #31a8ca; }
-article .date:before {
-	content: '('; }
-article .date:after {
-	content: ')'; }
+/* Dates */
+@media screen and (min-width: 800px) {
+	.date {
+		float: right;
+	}
 
-/* 4. Skills */
+	article.work hgroup {
+		float: left;
+	}
+}
+
+.date.start:before {
+	content: 'From: ';
+}
+.date.end:before {
+	content: 'To: ';
+}
+.date.end:after,.date.start:after {content: '';
+}
+.date.end {
+	clear: right;
+}
+.date:before,.date:after {
+	color: #31a8ca;
+}
+article .date:before {
+	content: '(';
+}
+article .date:after {
+	content: ')';
+}
+
+/* Skills */
 .horizontal-list h3,.horizontal-list ul,.horizontal-list ul li {
 	display: inline;
 	font-size: 14px;
 	line-height: 16px;
 }
 .horizontal-list h3:after {
-	content: ': ';}
+	content: ': ';
+}
 .horizontal-list ul li:after {
-	content: ', ';}
+	content: ', ';
+}
 .horizontal-list ul li:nth-last-child(2):after {
-	content: ', ';}
+	content: ', ';
+}
 .horizontal-list ul li:nth-last-child(1):after {
-	content: '.';}
+	content: '.';
+}
 .horizontal-list ul li:nth-last-child(1):before {
 	content: 'and ';
 }
 .work-details {
-	margin: 10px 0px; }
+	margin: 10px 0px;
+}
 
 .linkLike:hover {
 	cursor: pointer;
@@ -148,9 +221,10 @@ article .date:after {
 }
 
 #skillsUL {
-	margin-top: 10px; }
+	margin-top: 10px;
+}
 
-/* 5. Academic */
+/* Academic */
 #academic article span.title {
 	font-style: italic;
 }
@@ -159,13 +233,17 @@ article .date:after {
 	margin-bottom: 40px;
 }
 
-/* 6. Work animation */
+/* Work animation */
+#experience {
+	perspective: 30rem;
+}
+
 .work {
 	transition:
 		transform 0.4s,
 		height 0.4s,
 		margin 0.4s;
-	transform: scaleY(1);
+	transform: rotate3d(1, 0, 0, 0deg);
 }
 
 .work * {
@@ -173,7 +251,8 @@ article .date:after {
 }
 
 .work--hidden {
-	transform: scaleY(0);
+	transform: rotate3d(1, 0, 0, 90deg)
+		translate3d(0, -100px, -10px);
 	height: 0;
 	margin: 0;
 	overflow: hidden;
@@ -187,11 +266,14 @@ article .date:after {
 @page {
 	margin: 3cm 2cm 4cm 2cm;
 }
-/* 6. Print */
+/* Print */
 @media print {
-	/*body {margin: 3cm 2cm 4cm 2cm;}*/
+	/*body {margin: 3cm 2cm 4cm 2cm;
+	}*/
 	/* Don't allow page breaks inside articles,or any of the academic subsections */
-	article,#academic section { page-break-inside: avoid; }
+	article,#academic section {
+		page-break-inside: avoid;
+	}
 
 	/* Reset everything to boring black */
 	body *,.work h3:nth-child(2),h2:nth-child(2),.horizontal-list h3,dl dt,h3 a,#academic article span.title,.date:before,.date:after {
@@ -202,22 +284,29 @@ article .date:after {
 	/* Font print sizes need to be a little larger */
 	body {
 		font-size: 16pt;
-		line-height: 1.3em;}
+		line-height: 1.3em;
+	}
 	header h2 {
-		font-size: 20pt; }
+		font-size: 20pt;
+	}
 	h3 {
 		font-size: 18pt;
-		font-weight: bold; }
+		font-weight: bold;
+	}
 	h4 {
 		font-size: 17pt;
-		font-style: italic; }
+		font-style: italic;
+	}
 	h3,h4 {
-		line-height: 1.3em; }
+		line-height: 1.3em;
+	}
 
 	/* Put links after the text so people know they're there */
-	a:link:after,a:visited:after { content:" [" attr(href) "] "; }
+	a:link:after,a:visited:after { content:" [" attr(href) "] ";
+	}
 	/* Exclude links which aren't text */
-	#contact-info a:link:after,#contact-info a:visited:after { content: ''; }
+	#contact-info a:link:after,#contact-info a:visited:after { content: '';
+	}
 
 	/* Set widths for the divs */
 	div.container .eleven.columns,div.container div.sixteen.columns  {
@@ -226,44 +315,59 @@ article .date:after {
 	}
 	div.container .ten.columns {
 		width: 62.5%;
-		margin: 0px; }
+		margin: 0px;
+	}
 	div.container .six.columns {
 		width: 37.5%;
-		margin: 0px; }
+		margin: 0px;
+	}
 	/* Hide skills list on right and the link to download the PDF */
-	#skillsSection,.PDF-Link { display: none; }
+	#skillsSection,.PDF-Link { display: none;
+	}
 
 	/* Set skills list for each article and spacing */
 	section h2 {
-		margin-top: 20px; }
+		margin-top: 20px;
+	}
 	#experience h2 {
-		margin-bottom: -20px; }
+		margin-bottom: -20px;
+	}
 	.work {
-		margin: 12px 0px; }
+		margin: 12px 0px;
+	}
 	.work hgroup {
-		margin: 14px 0px; }
+		margin: 14px 0px;
+	}
 	.work {
-		margin-bottom: 15px; }
+		margin-bottom: 15px;
+	}
 	.horizontal-list h3,.horizontal-list ul,.horizontal-list ul li {
 		display: inline;
 		font-size: 14pt;
 	}
 	#academic,article:nth-child(1),article:nth-child(1) .row {
 		margin-bottom: 0px;
-		padding-bottom: 0px; }
+		padding-bottom: 0px;
+	}
 
 	/* Fix top list for print */
 	dl { padding-right: 1cm;
-		font-size: 0.9em; }
-	dt {text-align: left;}
+		font-size: 0.9em;
+	}
+	dt {text-align: left;
+	}
 	dd {text-align: right;
-		margin: 0% 1% 0% 0%;}
+		margin: 0% 1% 0% 0%;
+	}
 	dd:after {
-		content: ' | '; }
-	dt:after { content: ''; }
+		content: ' | ';
+	}
+	dt:after { content: '';
+	}
 	dt {
 		float: right;
 		clear: left;
-		margin-right: 0%; }
+		margin-right: 0%;
+	}
 
 }
