@@ -18,12 +18,10 @@ $$('#experience .work').forEach((workEl) => {
 	workEl.dataset.skills = skills;
 	skills.forEach(addToSkills);
 
-	requestAnimationFrame(() => {
-		const height = workEl.offsetHeight;
-
-		workEl.dataset.height = height;
-		workEl.style.height = `${height}px`;
-
+	workEl.addEventListener('transitionend', function(e) {
+		if (e.propertyName === 'height' && workEl.style.height !== 0) {
+			workEl.style.height = null;
+		}
 	});
 });
 
@@ -50,12 +48,17 @@ requestAnimationFrame(() => {
 
 function showEl(el) {
 	el.classList.remove(HIDDEN_WORK_CLASS);
-	el.style.height = `${el.dataset.height}px`;
+	el.style.height = `${el._cachedHeight}px`;
 }
 
 function hideEl(el) {
-	el.classList.add(HIDDEN_WORK_CLASS);
-	el.style.height = 0;
+	const height = el.offsetHeight;
+	el._cachedHeight = height;
+	el.style.height = `${height}px`;
+	el._tID = window.requestAnimationFrame(function() {
+		el.classList.add(HIDDEN_WORK_CLASS);
+		el.style.height = 0;
+	});
 }
 
 function renderSkillRow(template, skill) {
