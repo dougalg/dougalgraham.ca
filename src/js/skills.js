@@ -14,11 +14,17 @@ const renderedList = renderSkillListWithTemplate(temporaryUl, listItemTpl, skill
 addAndShowList(renderedList, temporaryUl);
 
 function showEl(el) {
+	if (!el.classList.contains(HIDDEN_WORK_CLASS)) {
+		return;
+	}
 	el.classList.remove(HIDDEN_WORK_CLASS);
 	el.style.height = `${el._cachedHeight}px`;
 }
 
 function hideEl(el) {
+	if (el.classList.contains(HIDDEN_WORK_CLASS)) {
+		return;
+	}
 	const height = el.offsetHeight;
 	el._cachedHeight = height;
 	el.style.height = `${height}px`;
@@ -100,9 +106,7 @@ function getChangeHandler(el) {
 			allWorkEls.forEach((el) => {
 				var isVisible = allSelected.some((skill) => el.dataset.skills.split(',').includes(skill));
 				if (isVisible) {
-					if (!el.classList.contains(HIDDEN_WORK_CLASS)) {
-						showEl(el);
-					}
+					showEl(el);
 				}
 				else {
 					hideEl(el);
