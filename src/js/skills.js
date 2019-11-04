@@ -1,50 +1,17 @@
-const $ = (s, target=document) => target.querySelector(s);
-const $$ = (s, target=document) => Array.from(target.querySelectorAll(s));
-
 const HIDDEN_WORK_CLASS = 'work--hidden';
 
-// Set the easing speed for show/hide
-showHideDuration = 500;
+const $ = (s, target = document) => target.querySelector(s);
+const $$ = (s, target = document) => Array.from(target.querySelectorAll(s));
 
-// Now, let's make a list of all the skills
-const allSkills = new Set();
-const addToSkills = allSkills.add.bind(allSkills);
-const allCheckboxes = [];
-
-$$('#experience .work').forEach((workEl) => {
-	const skills = $$('footer.skills ul li', workEl)
-		.map((li) => li.textContent);
-
-	workEl.dataset.skills = skills;
-	skills.forEach(addToSkills);
-
-	workEl.addEventListener('transitionend', function(e) {
-		if (e.propertyName === 'height' && workEl.style.height !== 0) {
-			workEl.style.height = null;
-		}
-	});
-});
-
-$('#resetSkills').addEventListener('click', showAllWork);
-
-// Sort and add the checkboxes, lis, etc...
-const listItemTpl = $('#skillListItem').content;
+const allWorkEls = $$('#experience .work');
 const temporaryUl = $('#skillsUL');
-const skillsUl = document.importNode(temporaryUl);
-const allListItems = Array.from(allSkills.values())
-	.sort()
-	.map((value) => renderSkillRow(listItemTpl, value));
-allListItems.forEach((el) => {
-	const changeHandler = getChangeHandler(el);
-	const input = $('input', el);
-	input.addEventListener('change', changeHandler);
-	addToggler(input);
-	skillsUl.appendChild(el);
-});
-replaceNode(skillsUl, temporaryUl);
-requestAnimationFrame(() => {
-	$('#skillsSection').classList.remove('hidden');
-});
+const listItemTpl = $('#skillListItem').content;
+
+const skillsForWorkEls = mapWorkElsToSkills(allWorkEls);
+skillsForWorkEls.forEach(setSkillsAndTransitionHandler);
+$('#resetSkills').addEventListener('click', showAllWork);
+const renderedList = renderSkillListWithTemplate(temporaryUl, listItemTpl, skillsForWorkEls);
+addAndShowList(renderedList, temporaryUl);
 
 function showEl(el) {
 	el.classList.remove(HIDDEN_WORK_CLASS);
@@ -76,14 +43,6 @@ function renderSkillRow(template, skill) {
 	skillName.textContent = skill;
 
 	return clone;
-}
-
-let workEls;
-function getWorkEls() {
-	if (!workEls) {
-		workEls = $$('#experience .work');
-	}
-	return workEls;
 }
 
 function addToggler(el) {
@@ -138,10 +97,12 @@ function getChangeHandler(el) {
 		}
 
 		requestAnimationFrame(() => {
-			getWorkEls().forEach((el) => {
+			allWorkEls.forEach((el) => {
 				var isVisible = allSelected.some((skill) => el.dataset.skills.split(',').includes(skill));
 				if (isVisible) {
-					showEl(el);
+					if (!el.classList.contains(HIDDEN_WORK_CLASS)) {
+						showEl(el);
+					}
 				}
 				else {
 					hideEl(el);
@@ -159,14 +120,59 @@ function replaceNode(newEl, oldEl) {
 
 let allInputs;
 function showAllWork() {
-	allInputs = allInputs || $$('input', skillsUl);
+	allInputs = allInputs || $$('input', renderedList);
 	allInputs.forEach((input) => {
 		if (input.checked) {
 			input.checked = false;
 			input.toggle();
 		}
 	});
-	getWorkEls().forEach((el) => {
+	allWorkEls.forEach((el) => {
 		showEl(el);
+	});
+}
+
+function getSkillsForWork(el) {
+	return $$('footer.skills ul li', el).map((li) => li.textContent);
+}
+
+function mapWorkElsToSkills(workEls) {
+	return workEls.map((el) => ({
+		el,
+		skills: getSkillsForWork(el),
+	}));
+}
+
+function setSkillsAndTransitionHandler({ el, skills }) {
+	el.dataset.skills = skills;
+
+	el.addEventListener('transitionend', function(e) {
+		if (e.propertyName === 'height' && el.style.height !== 0) {
+			el.style.height = null;
+		}
+	});
+}
+
+function renderSkillListWithTemplate(temporaryUl, listItemTpl, skillsForWorkEls) {
+	const skillsUl = document.importNode(temporaryUl);
+	const allListItems = Array.from(new Set(skillsForWorkEls.flatMap(({ skills }) => skills)).values())
+		.sort()
+		.map((value) => renderSkillRow(listItemTpl, value));
+
+	allListItems.forEach((el) => {
+		const changeHandler = getChangeHandler(el);
+		const input = $('input', el);
+		input.addEventListener('change', changeHandler);
+		addToggler(input);
+		skillsUl.appendChild(el);
+	});
+
+	return skillsUl;
+}
+
+function addAndShowList(skillsUl, temporaryUl) {
+	replaceNode(skillsUl, temporaryUl);
+	requestAnimationFrame(() => {
+		$('#skillsSection').classList.remove('hidden');
 	});
 }

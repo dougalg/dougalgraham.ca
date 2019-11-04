@@ -18,8 +18,9 @@
 
 	<!-- CSS
 	================================================== -->
-	<link rel="stylesheet" href="stylesheets/cv.css">
-
+	<style type="text/css">
+	{% include ./stylesheets/cv.css %}
+	</style>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -71,7 +72,7 @@
 			</dl>
 		</div>
 
-		<div id="exp_and_ed" class="eleven columns alpha">
+		<div id="exp_and_ed">
 			<section id="experience">
 				<h2>Experience</h2>
 				<article class="work js-skills--hideable">
@@ -183,7 +184,7 @@
 				</article>
 			</section>
 
-			<section id="projects" class="eleven columns alpha">
+			<section id="projects" style="clear: both;">
 				<h2>Projects</h2>
 				<article class="work">
 					<h3>
@@ -289,7 +290,7 @@
 				</article>
 			</section>
 
-			<section id="education" class="eleven columns alpha">
+			<section id="education">
 				<h2>Education</h2>
 				<p>Memorial University of Newfoundland <span class="date">2008</span><br />
 				Master’s in Computational Linguistics - Finite-state Parsing of Cayuga Morphology</p>
@@ -297,7 +298,7 @@
 				Bachelor's Degree in Linguistics, minor in German</p>
 			</section>
 
-			<section id="academic" class="eleven columns alpha">
+			<section id="academic">
 				<h2>Academic</h2>
 
 				<h3>Publications</h3>
