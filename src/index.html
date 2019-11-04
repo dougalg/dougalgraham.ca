@@ -51,22 +51,50 @@
 				<h2>Web Developer</h2>
 			</hgroup>
 		</header>
-		<div id="contact-info">
-			<dl>
-				<dt>Phone</dt>
-				<dd>+66 (0) 98-282-3630</dd>
-				<dt>Email</dt>
-				<dd>
+		<style lang="text/css">
+			.contact-info__list {
+				margin: 0;
+				display: grid;
+				grid-template-columns: auto auto;
+			}
+			.contact-info__list__term {
+				text-align: right;
+			}
+			.contact-info__list__term:after {
+				content: ': ';
+			}
+			.contact-info__list__def {
+				margin-left: 0.5rem;
+			}
+
+			.github-mark {
+				width: 1rem;
+				height: 1rem;
+				margin-bottom: -4px;
+				margin-right: 0.2rem;
+			}
+			@media screen and (min-width: 640px) {
+				.contact-info__list {
+					margin: 1rem 0;
+				}
+			}
+		</style>
+		<div id="contact-info" class="contact-info">
+			<dl class="contact-info__list">
+				<dt class="contact-info__list__term">Phone</dt>
+				<dd class="contact-info__list__def">+66 (0) 98-282-3630</dd>
+				<dt class="contact-info__list__term">Email</dt>
+				<dd class="contact-info__list__def">
 					{% include ./components/link.html, href: "mailto:dougalg@gmail.com", text: "dougalg@gmail.com", ariaLabel: "Send me an email" %}
 				</dd>
-				<dt>
+				<dt class="contact-info__list__term">
 					{% include ./icons/github.html %}
 				</dt>
-				<dd>
+				<dd class="contact-info__list__def">
 					{% include ./components/link.html, href: "https://www.github.com/dougalg", text: "dougalg ", ariaLabel: "My GitHub page." %}
 				</dd>
-				<dt class="PDF-Link">PDF</dt>
-				<dd class="PDF-Link">
+				<dt class="contact-info__list__term PDF-Link">PDF</dt>
+				<dd class="contact-info__list__def PDF-Link">
 					{% include ./components/link.html, href: "print_pdf.php", text: "Download CV" %}
 				</dd>
 			</dl>

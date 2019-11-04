@@ -3,12 +3,11 @@
   * 0. Base styles
   * 1. Headings
   * 2. Links
-  * 3. Contact Info
-  * 4. Dates
-  * 5. Skills
-  * 6. Academic
-  * 7. Work animation
-  * 8. Print
+  * 3. Dates
+  * 4. Skills
+  * 5. Academic
+  * 6. Work animation
+  * 7. Print
   *
   */
 
@@ -53,8 +52,8 @@ h1 {
 }
 h2 {
 	font-size: 3.5rem;
-	line-height: 40px;
-	margin-bottom: 10px;
+	line-height: 4rem;
+	margin-bottom: 1rem;
 }
 h3 {
 	font-size: 1.8rem;
@@ -133,31 +132,8 @@ h3 a,h3 a:visited {
 	color: #2E99B8;
 }
 
-/* Contact Info */
-dl {
-	margin-top: 1rem;
-	display: grid;
-    grid-template-columns: auto auto;
-}
-dt {
-	text-align: right;
-}
-dt:after {
-	content: ': ';
-}
-dd {
-	margin-left: 0.5rem;
-}
-
-.github-mark {
-	width: 1rem;
-	height: 1rem;
-	margin-bottom: -4px;
-	margin-right: 0.2rem;
-}
-
 /* Dates */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800) {
 	.date {
 		float: right;
 	}
@@ -191,8 +167,8 @@ article .date:after {
 /* Skills */
 .horizontal-list h3,.horizontal-list ul,.horizontal-list ul li {
 	display: inline;
-	font-size: 14px;
-	line-height: 16px;
+	font-size: 1.4rem;
+	line-height: 1.6rem;
 }
 .horizontal-list h3:after {
 	content: ': ';
@@ -210,7 +186,7 @@ article .date:after {
 	content: 'and ';
 }
 .work-details {
-	margin: 10px 0px;
+	margin: 1rem 0;
 }
 
 .linkLike:hover {
@@ -227,7 +203,7 @@ article .date:after {
 }
 
 #skillsUL {
-	margin-top: 10px;
+	margin-top: 1rem;
 }
 
 /* Academic */
@@ -236,7 +212,7 @@ article .date:after {
 }
 
 #academic {
-	margin-bottom: 40px;
+	margin-bottom: 4rem;
 }
 
 /* Work animation */
@@ -258,7 +234,7 @@ article .date:after {
 
 .work--hidden {
 	transform: rotate3d(1, 0, 0, 90deg)
-		translate3d(0, -150px, -10px);
+		translate3d(0, -150, -1rem);
 	opacity: 0;
 	height: 0;
 	margin: 0;
@@ -320,15 +296,15 @@ article .date:after {
 	/* Set widths for the divs */
 	div.container .eleven.columns,div.container div.sixteen.columns  {
 		width: 100%;
-		margin: 0px;
+		margin: 0;
 	}
 	div.container .ten.columns {
 		width: 62.5%;
-		margin: 0px;
+		margin: 0;
 	}
 	div.container .six.columns {
 		width: 37.5%;
-		margin: 0px;
+		margin: 0;
 	}
 	/* Hide skills list on right and the link to download the PDF */
 	#skillsSection,.PDF-Link {
@@ -337,27 +313,27 @@ article .date:after {
 
 	/* Set skills list for each article and spacing */
 	section h2 {
-		margin-top: 20px;
+		margin-top: 20;
 	}
 	#experience h2 {
-		margin-bottom: -20px;
+		margin-bottom: -20;
 	}
 	.work {
-		margin: 12px 0px;
+		margin: 1.2rem 0;
 	}
 	.work hgroup {
-		margin: 14px 0px;
+		margin: 1.4rem 0;
 	}
 	.work {
-		margin-bottom: 15px;
+		margin-bottom: 1.5rem;
 	}
 	.horizontal-list h3,.horizontal-list ul,.horizontal-list ul li {
 		display: inline;
 		font-size: 14pt;
 	}
 	#academic,article:nth-child(1),article:nth-child(1) .row {
-		margin-bottom: 0px;
-		padding-bottom: 0px;
+		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 
 	/* Fix top list for print */
