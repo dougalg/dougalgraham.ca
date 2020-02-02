@@ -78,8 +78,10 @@ function addToggler(el) {
 		}
 
 		requestAnimationFrame(() => {
-			this.vert.setAttribute('transform', `rotate(${el.rotation}, 45, 45)`);
-			this.squirkle.setAttribute('transform', `rotate(${el.rotation}, 45, 45)`);
+			// this.vert.setAttribute('transform', `rotate(${el.rotation}, 45, 45)`);
+			// this.squirkle.setAttribute('transform', `rotate(${el.rotation}, 45, 45)`);
+			this.vert.setAttribute('style', `transform: rotate(${el.rotation}deg);`);
+			this.squirkle.setAttribute('style', `transform: rotate(${el.rotation}deg);`);
 		});
 	};
 }
