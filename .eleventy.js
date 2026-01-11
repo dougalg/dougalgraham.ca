@@ -1,10 +1,14 @@
-const htmlmin = require('html-minifier');
+import htmlmin from 'html-minifier-next';
 
-module.exports = function(eleventyConfig) {
+export default async function main(eleventyConfig) {
+	eleventyConfig.setLiquidOptions({
+		dynamicPartials: false,
+	});
+
 	eleventyConfig.addPassthroughCopy("src/images");
 
-	eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-		if(outputPath.endsWith(".html")) {
+	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+		if (outputPath.endsWith(".html")) {
 			let minified = htmlmin.minify(content, {
 				useShortDoctype: true,
 				removeComments: true,
@@ -18,4 +22,5 @@ module.exports = function(eleventyConfig) {
 
 		return content;
 	});
+
 };

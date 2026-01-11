@@ -3,19 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "type": "module",
   "devDependencies": {
-    "@11ty/eleventy": "^0.9.0",
-    "html-minifier": "4.0.0"
+    "@11ty/eleventy": "3.1.2",
+    "html-minifier-next": "4.17.0"
   },
   "scripts": {
-		"prebuild": "rm -rf ./dist",
+    "prebuild": "rm -rf ./dist",
     "build": "eleventy --input=./src --output=./dist --formats=html,js,scss,css",
-		"predev": "rm -rf ./_site",
-		"dev": "eleventy --input=./src --formats=html,js,scss,css --serve",
-		"deploy": "rsync -rzvh ./dist/* dgraham@dougalgraham.ca:/webroot/home/lighttpd/dougalgraham.ca/"
+    "predev": "rm -rf ./_site",
+    "dev": "eleventy --input=./src --formats=html,js,scss,css --serve",
+    "deploy": "rsync -rzvh ./dist/* dgraham@dougalgraham.ca:/webroot/home/lighttpd/dougalgraham.ca/"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy-upgrade-help": "3.0.2"
+  }
 }
